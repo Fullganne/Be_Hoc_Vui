@@ -72,10 +72,10 @@ a {
     color: #e11a1f !important;
 }
 .header__about {
-    color: #92278f;
+    color:#00B050 !important;
 }
 .header__register a {
-    color: rgb(197, 90, 17) !important;
+    color: #c55a11 !important;
 }
 .header__login a {
     color: #0070C0 !important;
@@ -634,13 +634,13 @@ display: none;
 }
 @media all and (min-width: 1000px) and (max-width: 1380px) {
     .about-wrapper::before {
-        width: 52%;
+        width: 50%;
     }
 }
 
 @media all and (min-width: 200px){
 	.nav-2{
-background-color: #fef8eb;
+        background-color: #fef8eb;
 		display: block;
 }
 .nav-2 .row{
@@ -668,14 +668,16 @@ max-width: calc(16.66% - 32px) !important;
     border: 2px solid rgba(255, 255, 255, 5); 
     display: block;
     background: transparent;
-    width: 600px; 
-    height: auto; 
+    width: 50%; 
+    height: auto;
     margin-left: auto;
     margin-right: auto;
     border-radius: 15px;
     backdrop-filter: blur(30px);
     box-shadow: 0 0 30px rgba(0,0,0,.5);
+    padding: 5px;
     color: black;
+    line-height: 200%;
 }
 .label-register{
     padding: 5%;
@@ -700,25 +702,40 @@ max-width: calc(16.66% - 32px) !important;
 }
 .col-25 {
     float: left;
-    width: 30%;
-    margin-top: 6px;
+    width: 40%;
+    margin-top: 12px;
   }
 .col-75 {
     float: left;
-    width: 70%;
-    margin-top: 6px;
+    width: 60%;
+    margin-top: 10px;
   }
-.body-register-login{
-    background-image: url('/storage/be-hoc-vui-wallpaper.png');
+.body-register{
+    background: linear-gradient(150deg, #ffffff, #ffffff,#b2d7f8, #b2d7f8);
     background-size: 100% 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
-
+.body-login{
+    background: linear-gradient(150deg, #ffffff, #ffffff,#b2d7f8, #b2d7f8);
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding-right: 5%;
+}
 .logo_image{
-    border-radius: 35px;
-    width: 25%; 
+    width: 75%;
+    height: 15%; 
     margin-left: auto;
     margin-right: auto;
-    padding: 15px;
+}
+.label-register li {
+    padding: 5px;
+}
+.owl-carousel img {
+    border-radius: 50%;
 }
