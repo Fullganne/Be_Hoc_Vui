@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bé học vui</title>
-    <link rel="icon" type="img/png" href="/storage/logo.png">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" type="img/png" href="/storage/favicon.png">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -14,6 +14,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.0/swiper-bundle.min.css" integrity="sha512-Ja1oxinMmERBeokXx+nbQVVXeNX771tnUSWWOK4mGIbDAvMrWcRsiteRyTP2rgdmF8bwjLdEJADIwdMXQA5ccg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Swiper JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.0/swiper-bundle.min.js" integrity="sha512-KBCt3sdFOcFtYTgEfE3uJckVpvPr1w8HPugyPgHFE/4iJOwhwj6eSaF27bDJTHRX2jyAFOgV3Ve9vOD97rbjrg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
     <body>
         <header class="header">
@@ -25,33 +31,157 @@
                     <div class="header__menu">
                         <div class="container">
                             <ul class="header__menu-wrap row">
-                                <li class="header__menu-item header__home-btn">
-                                    <a href="../index.html">Trang chủ</a>
-                                </li>
-                                <li class="header__menu-item header__about"><a href="/web/about.html" style="color:#00B050 !important">Giới thiệu</a></li>
-                                <li class="header__menu-item header__login"><a href="/web/login.html">Đăng nhập</a></li>
-                                <li class="header__menu-item header__register"><a href="/web/register.html">Đăng kí</a></li>
+                                <li class="header__menu-item header__home-btn"><a href="../index.html">Trang chủ</a></li>
+                                <li class="header__menu-item header__about"><a href="about.html" style="color:#00B050 !important">Giới thiệu</a></li>
+                                <li class="header__menu-item header__login"><a href="login.html">Đăng nhập</a></li>
+                                <li class="header__menu-item header__register"><a href="register.html">Đăng kí</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-        <section class="nav-2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-2 nav2-item"><a href="../toan_1.html">Lớp 1</a></div>
-                    <div class="col-2 nav2-item"><a>Lớp 2</a></div>
-                    <div class="col-2 nav2-item"><a>Lớp 3</a></div>
-                    <div class="col-2 nav2-item"><a>Lớp 4</a></div>
-                    <div class="col-2 nav2-item"><a>Lớp 5</a></div>
-                </div>
-            </div>
-        </section>
         <main>
-            <section class="about position-relative">
-                <div class="container"></div>
+            <section>
+                <div class="swiper mySwiper container">
+                    <div class="swiper-wrapper content">
+                        <div class="swiper-slide cards">
+                            <div class="card-content">
+                                <div class="card-image">
+                                    <img src="./storage/Duong.jpg"/>
+                                </div>
+                                <div class="media-icons">
+                                    <i class="fa-brands fa-facebook" onclick="window.open('https://www.facebook.com/profile.php?id=100065092697515')"></i>
+                                    <i class="fa-brands fa-github"></i>
+                                </div>
+                                <div class="name-teacher">
+                                    <span class="name">Phan Lương Thùy Dương</span>
+                                    <span class="profession">Giáo viên chuyên làm màu</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                  </div>
+                                  <div class="button">
+                                    <button>About me</button>
+                                    <button>Hire me</button>
+                                  </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide cards">
+                            <div class="card-content">
+                                <div class="card-image">
+                                    <img src="./storage/Linh.jpg"/>
+                                </div>
+                                <div class="media-icons">
+                                    <i class="fa-brands fa-facebook" onclick="window.open('https://www.facebook.com/profile.php?id=100032014386263')"></i>
+                                    <i class="fa-brands fa-github" onclick="window.open('#')"></i>
+                                </div>
+                                <div class="name-teacher">
+                                    <span class="name">Nguyễn Trần Ánh Linh</span>
+                                    <span class="profession">Giáo viên chuyên làm màu</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="button">
+                                    <button>About me</button>
+                                    <button>Hire me</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide cards">
+                            <div class="card-content">
+                                <div class="card-image">
+                                    <img src="./storage/An.jpg"/>
+                                </div>
+                                <div class="media-icons">
+                                    <i class="fa-brands fa-facebook" onclick="window.open('https://www.facebook.com/Fullganne')"></i>
+                                    <i class="fa-brands fa-github"></i>
+                                </div>
+                                <div class="name-teacher">
+                                    <span class="name">Nguyễn Đức Ân</span>
+                                    <span class="profession">Giáo viên chuyên làm màu</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="button">
+                                    <button>About me</button>
+                                    <button>Hire me</button>
+                                </div>                                
+                            </div>
+                        </div>
+                        <div class="swiper-slide cards">
+                            <div class="card-content">
+                                <div class="card-image">
+                                    <img src="./storage/Phu.jpg"/>
+                                </div>
+                                <div class="media-icons">
+                                    <i class="fa-brands fa-facebook" onclick="window.open('https://www.facebook.com/kienphu2109')"></i>
+                                    <i class="fa-brands fa-github"></i>
+                                </div>
+                                <div class="name-teacher">
+                                    <span class="name">Võ Kiến Phú</span>
+                                    <span class="profession">Giáo viên chuyên làm màu</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="button">
+                                    <button>About me</button>
+                                    <button>Hire me</button>
+                                </div>                                
+                            </div>
+                        </div>
+                        <div class="swiper-slide cards">
+                            <div class="card-content">
+                                <div class="card-image">
+                                    <img src="./storage/Tan.jpg"/>
+                                </div>
+                                <div class="media-icons">
+                                    <i class="fa-brands fa-facebook" onclick="window.open('https://www.facebook.com/profile.php?id=100011758953962')"></i>
+                                    <i class="fa-brands fa-github"></i>
+                                </div>
+                                <div class="name-teacher">
+                                    <span class="name">Nguyễn Duy Tân</span>
+                                    <span class="profession">Giáo viên chuyên làm màu</span>
+                                </div>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                                <div class="button">
+                                    <button>About me</button>
+                                    <button>Hire me</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next swiper-navBtn"></div>
+                <div class="swiper-button-prev swiper-navBtn"></div>
+                <div class="swiper-pagination"></div>
             </section>
+            <script src="js/swiper.js"></script>
         </main>
     </body>
 </html>

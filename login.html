@@ -4,8 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Bé học vui</title>
-        <link rel="icon" type="img/png" href="/storage/logo.png">
-        <link rel="stylesheet" href="/css/style.css">
+        <link rel="icon" type="img/png" href="../storage/favicon.png">
+        <link rel="stylesheet" href="../css/style.css">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <!-- jQuery library -->
@@ -14,6 +14,20 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="./css/palette.scss">
     </head>
-    
+    <body class="body-login">
+        <div style="width: 50%;">
+            <a href="../index.html"><img src="../storage/logo-removebg.png" alt="Logo" class="img logo_image"></a>
+        </div>
+        <div class="container-register" style="width: 50%;">
+            <div class="label-register">
+                <form action="/action_page.php" autocomplete="on">
+                    <li><label for="phonenumber" class="col-25">Số điện thoại:</label><input type="tel" id="pnumber" name="phonenumber" placeholder="1234567890" pattern="[0-9]{10}" class="input-form-register col-75"><br></li>
+                    <li><label for="pass" class="col-25">Mật khẩu:</label><input type="text" id="pass" name="password" placeholder="********" class="input-form-register col-75"><br></li>
+                    <input type="submit" value="ĐĂNG NHẬP" class="submit-btn">
+                </form> 
+            </div>
+        </div>
+    </body>
 </html>

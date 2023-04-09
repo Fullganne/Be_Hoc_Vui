@@ -67,6 +67,7 @@ a {
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
+    font-size: 15px;
 }
 .header__home-btn a {
     color: #e11a1f !important;
@@ -736,6 +737,135 @@ max-width: calc(16.66% - 32px) !important;
 .label-register li {
     padding: 5px;
 }
-.owl-carousel img {
+section .cards .card-image {
+    height: 140px;
+    width: 140px;
     border-radius: 50%;
+    padding: 3px;
+    background: #a1d2fd;
 }
+section .cards .card-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+.cards {
+    position: relative;
+    background: #fff;
+    border-radius: 20px 20px 10px 10px;
+    margin: 20px 0;
+    box-shadow: 0 5px 10px #000000;
+}
+.cards::before{
+    content: "";
+    position: absolute;
+    height: 40%;
+    width: 100%;
+    background: #a1d2fd;
+    border-radius: 20px 20px 10px 10px;
+  }
+.cards .card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    position: relative;
+    z-index: 100;
+    border-radius: 20px 20px 10px 10px;
+}
+section {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cards .media-icons{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cards .media-icons i{
+    color: #fff;
+    opacity: 0.6;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.cards .media-icons i:hover{
+    opacity: 1;
+  }
+.cards .name-teacher {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+.name-teacher .name {
+    font-size: 20px;
+    font-weight: 600;
+}
+.name-teacher .teacher {
+    font-size: 15px;
+    font-weight: 500;
+}
+.cards .rating {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+.cards .rating i {
+    font-size: 20px;
+    margin: 0 2px;
+    color: #ffeb0d;
+}
+.cards .button {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.cards .button button {
+    background: #a1d2fd;
+    outline: none;
+    border: none;
+    color: #8f8f8f;
+    padding: 8px 22px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.button button:hover {
+    background: #4b0b9f;
+}
+.swiper{
+    width: 950px;
+}
+.swiper-pagination {
+    position: sticky !important;
+}
+.swiper-pagination-bullet {
+    height: 7px !important;
+    width: 26px !important;
+    border-radius: 25px !important;
+    background: #a1d2fd !important;
+}
+.swiper-button-next::after, .swiper-button-prev::after{
+    opacity: 1;
+    color: #a1d2fd;
+    transition: all 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+    .mySwiper{
+      margin: 0 10px;
+    }
+    .swiper-navBtn{
+      display: none;
+    }
+    
+  }
