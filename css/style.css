@@ -883,3 +883,32 @@ section {
     position: fixed;
     margin-top: 25px;
 }
+.listPage{
+    padding: 10px;
+    text-align: center;
+    list-style: none;
+}
+.listPage li{
+    background-color: gray;
+    padding: 20px;
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    color: #fff;
+}
+.listPage .active{
+    background-color: #B129EF;
+    color: #fff;
+}
+
+.list-topic__content {
+    margin-bottom: 1rem !important;
+    display: flex  ;
+    flex-direction: column 1 1;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.list-topic__content .item-wrap{
+    margin: 10px 10px;
+}
