@@ -1,11 +1,27 @@
+<?php 
+    session_start();
+    ob_start();
+    
+    if(isset($_POST['submit-btn'] && ($_POST['submit-btn']) )){
+        &user=$_POST['phonenumber'];
+        &pass=&_POST['password']
+
+
+    }
+
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Bé học vui</title>
+        <title>Đăng nhập</title>
         <link rel="icon" type="img/png" href="../storage/favicon.png">
-        <link rel="stylesheet" href="../css/style.css">
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <!-- jQuery library -->
@@ -15,6 +31,7 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="./css/palette.scss">
+        <link rel="stylesheet" href="../css/style.css">
     </head>
     <body class="body-login">
         <div style="width: 50%;">
