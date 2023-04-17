@@ -927,3 +927,20 @@ section {
 .list-topic__content .item-wrap{
     margin: 10px 10px;
 }
+.label-register .alert {
+    display: none;
+    height: 25px;
+    margin: 0 !important;
+    padding-top: 0;
+
+}
+.label-register .error {
+    color: #D93025;
+    font-size: 18px;
+    margin: 0 !important;
+    padding: 0;
+}
+.label-register .col-75 .text {
+    margin-left: 25px; 
+    color: #D93025;
+}
