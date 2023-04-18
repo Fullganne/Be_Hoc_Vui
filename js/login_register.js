@@ -7,8 +7,8 @@ const form = document.getElementById("myForm"),
   alertText= document.querySelector(".text"),
   alertAll = document.querySelector(".alert"),
   submitBtn = document.querySelector("#regis-submit-btn");
-// Register Form
-  //Hide/show password
+//Hide/show password
+  // Register Form
 pwShow.addEventListener("click", ()=>{
   if((createPw.type === "password") && (confirmPw.type === "password")){
     createPw.type = "text";
@@ -17,6 +17,16 @@ pwShow.addEventListener("click", ()=>{
   }else {
     createPw.type = "password";
     confirmPw.type = "password";
+    pwShow.classList.replace("fa-eye","fa-eye-slash");
+  }
+});
+  // Login Form
+pwShow.addEventListener("click", ()=>{
+  if((loginPw.type === "password")){
+    loginPw.type = "text";
+    pwShow.classList.replace("fa-eye-slash","fa-eye");
+  }else {
+    loginPw.type = "password";
     pwShow.classList.replace("fa-eye","fa-eye-slash");
   }
 });
@@ -56,19 +66,9 @@ confirmPassword.addEventListener("input", () => {
 });
 form.onsubmit = function () {
   if (isPasswordMatch) {
-    alert("Form submitted. Great!");
+    alert("Đăng kí thành công!");
     return true;
   }
-  alert("Wait! Password did not match.");
+  alert("Đăng kí thất bại!");
   return false;
 };
-// Login Form
-pwShow.addEventListener("click", ()=>{
-  if((loginPw.type === "password")){
-    loginPw.type = "text";
-    pwShow.classList.replace("fa-eye-slash","fa-eye");
-  }else {
-    loginPw.type = "password";
-    pwShow.classList.replace("fa-eye","fa-eye-slash");
-  }
-});

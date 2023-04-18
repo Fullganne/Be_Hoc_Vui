@@ -780,9 +780,12 @@ section .cards .card-image img {
 }
 section {
     height: 75vh;
-    display: flex;
+    display: flex !important;
+    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    background: #fef8eb;
 }
 .cards .media-icons{
     position: absolute;
@@ -851,6 +854,8 @@ section {
 }
 .swiper-pagination {
     position: sticky !important;
+    display: flex !important;
+    margin-top: 10px;
 }
 .swiper-pagination-bullet {
     height: 7px !important;
@@ -862,6 +867,8 @@ section {
     opacity: 1;
     color: #a1d2fd;
     transition: all 0.3s ease;
+    top: 0 !important;
+    margin-top: 22vh !important;
 }
 @media screen and (max-width: 768px) {
     .mySwiper{
