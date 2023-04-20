@@ -64,11 +64,3 @@ confirmPassword.addEventListener("input", () => {
     isPasswordMatch = true;
   }
 });
-form.onsubmit = function () {
-  if (isPasswordMatch) {
-    alert("Đăng kí thành công!");
-    return true;
-  }
-  alert("Đăng kí thất bại!");
-  return false;
-};
