@@ -6,8 +6,7 @@
     box-sizing: border-box;
 }
 
-ul,
-li {
+ul, li {
     list-style: none;
     font-family: "Roboto", sans-serif !important;
     margin-bottom: 0 !important;
@@ -50,7 +49,7 @@ a {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-/* header  */
+/* ---------------------------------------------------HEADER--------------------------------------------------- */
 .header-wrapper {
     align-items: baseline;
     justify-content: flex-start;
@@ -182,6 +181,7 @@ a {
     left: 45%;
 }
 
+/* ---------------------------------------------------TOPIC--------------------------------------------------- */
 .topic {
     position: relative;
     min-height: 100vh;
