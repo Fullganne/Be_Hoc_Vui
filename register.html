@@ -23,7 +23,7 @@
         </div>
         <div class="container-register">
             <div class="label-register">
-                <form action="register.php" id="myForm" autocomplete="on" method="POST">
+                <form action="register.php" onsubmit="return validateForm()" id="myForm" autocomplete="on" method="POST">
                     <li><label for="name" class="col-25">Họ và tên:</label><input type="text" id="name" name="name" placeholder="Nguyễn Văn A" class="input-form-register col-75"><br></li>
                     <li><label for="phonenumber" class="col-25">Số điện thoại:</label><input type="tel" id="pnumber" name="phonenumber" placeholder="1234567890" pattern="[0-9]{10}" class="input-form-register col-75"><br></li>
                     <li><label for="password" class="col-25">Mật khẩu:</label><input type="password" id="create_pw" name="password" class="input-form-register col-75"/><br></li>

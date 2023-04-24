@@ -64,3 +64,14 @@ confirmPassword.addEventListener("input", () => {
     isPasswordMatch = true;
   }
 });
+function validateForm() {
+  var x = document.forms["myForm"]["name"].value;
+  var y = document.forms["myForm"]["phonenumber"].value;
+  var z = document.forms["myForm"]["password"].value;
+  var s = document.forms["myForm"]["passwordAgain"].value;
+  var t = document.forms["myForm"]["email"].value;
+  if (x == "" || y == "" || z == "" || s == "" || t == "") {
+    alert("Vui lòng điền đầy đủ thông tin!");
+    return false;
+  }
+}

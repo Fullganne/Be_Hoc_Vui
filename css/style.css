@@ -745,7 +745,7 @@ section .cards .card-image {
     width: 140px;
     border-radius: 50%;
     padding: 3px;
-    background: #a1d2fd;
+    background: #82c1fa;
 }
 section .cards .card-image img {
     height: 100%;
@@ -766,7 +766,7 @@ section .cards .card-image img {
     position: absolute;
     height: 40%;
     width: 100%;
-    background: #a1d2fd;
+    background: #82c1fa;
     border-radius: 20px 20px 10px 10px;
   }
 .cards .card-content{
@@ -836,10 +836,10 @@ section .cards .card-image img {
     margin-top: 20px;
 }
 .cards .button button {
-    background: #a1d2fd;
+    background: #82c1fa;
     outline: none;
     border: none;
-    color: #8f8f8f;
+    color: #f4f4f4;
     padding: 8px 22px;
     border-radius: 20px;
     font-size: 14px;
@@ -861,11 +861,11 @@ section .cards .card-image img {
     height: 7px !important;
     width: 26px !important;
     border-radius: 25px !important;
-    background: #a1d2fd !important;
+    background: #82c1fa !important;
 }
 .swiper-button-next::after, .swiper-button-prev::after{
     opacity: 1;
-    color: #a1d2fd;
+    color: #82c1fa;
     transition: all 0.3s ease;
     top: 0 !important;
     margin-top: 22vh !important;
