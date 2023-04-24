@@ -1,3 +1,5 @@
+@import "./header.css";
+
 *,
 ::before,
 ::after {
@@ -22,6 +24,13 @@ body {
 a {
     text-decoration: none !important;
     color: #fff !important;
+}
+
+section {
+    height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .pagination_active {
@@ -49,63 +58,9 @@ a {
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-/* ---------------------------------------------------HEADER--------------------------------------------------- */
-.header-wrapper {
-    align-items: baseline;
-    justify-content: flex-start;
-    padding-top: 1.2rem;
-    padding-bottom: 1.2rem;
-}
-.header__buyvip a {
-    color: #002c9d !important;
-}
-.header__logo {
-    margin-right: 5rem;
-}
-.header__menu-item {
-    margin-right: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    font-size: 15px;
-}
-.header__home-btn a {
-    color: #e11a1f !important;
-}
-.header__about {
-    color:#00B050 !important;
-}
-.header__register a {
-    color: #c55a11 !important;
-}
-.header__login a {
-    color: #0070C0 !important;
-}
-.header__submenu {
-    position: absolute;
-    background-color: #fff;
-    padding: 1rem;
-    width: 150px;
-    top: 23px;
-    left: -30px;
-    text-align: center;
-    font-weight: bold;
-    display: none;
-    z-index: 10000;
-}
-.header__submenu-item {
-    color: #707070;
-    padding: 0.5rem;
-}
-.header__submenu-item:hover {
-    color: #ff5200;
-    background-color: #f2f2f2;
-}
-.header__baricon,
-.header__mobile {
-    display: none;
-}
+/* IN HEADER.CSS */
 
+/* BANNER HAVE NO PURPOSE, WILL BE EXCOMMUNICADO IN THE LAST COMMIT */
 .banner {
     background-repeat: no-repeat;
     background-size: cover;
@@ -186,7 +141,9 @@ a {
     position: relative;
     min-height: 100vh;
     padding: 80px 0;
-    background-image: url("http://labartisan.net/demo/kitton/assets/images/counter/counter-bg.jpg");
+    /* Going to school pic */
+    /* background-image: url("http://labartisan.net/demo/kitton/assets/images/counter/counter-bg.jpg"); */
+    background-image: url("https://z-p3-scontent.fsgn5-3.fna.fbcdn.net/v/t1.15752-9/320473926_681089853733572_1928534907131561609_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=ae9488&_nc_ohc=hGddpjFBwhIAX_ZoVeN&_nc_ht=z-p3-scontent.fsgn5-3.fna&oh=03_AdSAXPl4qxS0RezX5WyUipJIu8gmlQ0yXgEhwRQLNAFmLA&oe=646DE62D");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -596,11 +553,6 @@ a {
     text-align: right;
 }
 
-
-.nav-2{
-display: none;
-}
-
 @media all and (min-width: 1000px) {
     .header-wrapper {
         justify-content: space-between;
@@ -641,11 +593,11 @@ display: none;
 }
 
 @media all and (min-width: 200px){
-	.nav-2{
+	.grade-selector{
         background-color: #fef8eb;
-		display: block;
+		display: flex;
 }
-.nav-2 .row{
+.grade-selector .row{
 justify-content: space-between;
 }
 .nav2-item{
@@ -706,12 +658,12 @@ max-width: calc(16.66% - 32px) !important;
     float: left;
     width: 40%;
     margin-top: 12px;
-  }
+}
 .col-75 {
     float: left;
     width: 60%;
     margin-top: 10px;
-  }
+}
 .body-register{
     background: linear-gradient(150deg, #ffffff, #ffffff,#b2d7f8, #b2d7f8);
     background-size: 100% 100%;
@@ -768,7 +720,7 @@ section .cards .card-image img {
     width: 100%;
     background: #a1d2fd;
     border-radius: 20px 20px 10px 10px;
-  }
+}
 .cards .card-content{
     display: flex;
     flex-direction: column;
@@ -804,7 +756,7 @@ section .cards .card-image img {
 }
 .cards .media-icons i:hover{
     opacity: 1;
-  }
+}
 .cards .name-teacher {
     display: flex;
     flex-direction: column;
@@ -872,13 +824,13 @@ section .cards .card-image img {
 }
 @media screen and (max-width: 768px) {
     .mySwiper{
-      margin: 0 10px;
+        margin: 0 10px;
     }
     .swiper-navBtn{
-      display: none;
+        display: none;
     }
     
-  }
+}
 .body-login .label-register i {
     margin-left: -30px;
     cursor: pointer;
@@ -956,10 +908,4 @@ section .cards .card-image img {
     display: block; 
     justify-content: center; 
     align-items: center;
-}
-section {
-    height: 75vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
