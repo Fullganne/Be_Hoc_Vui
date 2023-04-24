@@ -1,0 +1,67 @@
+/* ---------------------------------------------------HEADER--------------------------------------------------- */
+.header-wrapper {
+    align-items: baseline;
+    justify-content: flex-start;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+
+.header__buyvip a {
+    color: #002c9d !important;
+}
+
+.header__logo {
+    margin-right: 5rem;
+}
+
+.header__menu-item {
+    margin-right: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.header__home-btn a {
+    color: #e11a1f !important;
+}
+
+.header__introduce {
+    color:#00B050 !important;
+}
+
+.header__register a {
+    color: #c55a11 !important;
+}
+
+.header__login a {
+    color: #0070C0 !important;
+}
+
+.header__submenu {
+    position: absolute;
+    background-color: #fff;
+    padding: 1rem;
+    width: 150px;
+    top: 23px;
+    left: -30px;
+    text-align: center;
+    font-weight: bold;
+    display: none;
+    z-index: 10000;
+}
+
+.header__submenu-item {
+    color: #707070;
+    padding: 0.5rem;
+}
+
+.header__submenu-item:hover {
+    color: #ff5200;
+    background-color: #f2f2f2;
+}
+
+.header__baricon,
+.header__mobile {
+    display: none;
+}
