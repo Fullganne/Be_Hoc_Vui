@@ -4,8 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bé học vui</title>
-    <link rel="icon" type="img/png" href="./storage/favicon.png">
-    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- SELF RESOURCE -->
+    <link rel="icon" type="img/png" href="../storage/favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
+
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -14,46 +18,43 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- <link rel="stylesheet" href="js/swiper.js"> -->
-    <link rel="stylesheet" href="./js/swiper.js">
 </head>
 <body>
     <header class="header">
         <div class="container">
             <div class="header-wrapper row">
                 <div class="header__logo">
-                    <a href="./index.html"><img src="./storage/logo.png" alt="Logo" class="img-fluid" style="object-fit:contain; width:150px; height:150px;"></a>
+                    <a href="../index.html"><img src="../storage/logo.png" alt="Logo" class="img-fluid" style="object-fit:contain; width:150px; height:150px;"></a>
                 </div>
                 <div class="header__menu">
                     <div class="container">
                         <ul class="header__menu-wrap row">
                             <li class="header__menu-item header__home-btn">
-                                <a href="./index.html">Trang chủ</a>
+                                <a href="../index.html">Trang chủ</a>
                             </li>
-                            <li class="header__menu-item header__about"><a href="./about.html" style="color:#00B050 !important">Giới thiệu</a></li>
-                            <li class="header__menu-item header__login"><a href="./login.html">Đăng nhập</a></li>
-                            <li class="header__menu-item header__register"><a href="./register.html">Đăng kí</a></li>
+                            <li class="header__menu-item header__about"><a href="../introduce.html" style="color:#00B050 !important">Giới thiệu</a></li>
+                            <li class="header__menu-item header__login"><a href="../login.html">Đăng nhập</a></li>
+                            <li class="header__menu-item header__register"><a href="../register.html">Đăng kí</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    <section class="nav-2">
+    <section class="grade-selector game">
         <div class="container">
             <div class="row">
-                <div class="col-2 nav2-item"><a href="./toan_1.html">Lớp 1</a></div>
-                <div class="col-2 nav2-item"><a href="">Lớp 2</a></div>
-                <div class="col-2 nav2-item"><a href="">Lớp 3</a></div>
-                <div class="col-2 nav2-item"><a>Lớp 4</a></div>
-                <div class="col-2 nav2-item"><a>Lớp 5</a></div>
+                <a href="./toan_1.html" class="col-2 grade-ele">Lớp 1</a>
+                <a href="./toan_1.html" class="col-2 grade-ele">Lớp 2</a>
+                <a href="./toan_1.html" class="col-2 grade-ele">Lớp 3</a>
+                <a href="./toan_1.html" class="col-2 grade-ele">Lớp 4</a>
+                <a href="./toan_1.html" class="col-2 grade-ele">Lớp 5</a>
             </div>
         </div>
     </section>
     <main>
         <div class="container">
             <div class="list-topic__filter">
-
             </div>
             <div class="list list-topic__content">
                 <div class="item item-wrap col-12 col-md-5" style="width: 100%; cursor: pointer;background-color: #009966; color: #fff;">Khởi động 1: Các số 1,2,3 </div>
@@ -124,8 +125,6 @@
                         prev.innerText = '<';
                         prev.setAttribute('onclick', "changePage(" + (thisPage - 1) + ")");
                         document.querySelector('.listPage').appendChild(prev);
-                       
-                       
                     }
 
                     for(i = 1; i <= count; i++){
@@ -171,10 +170,8 @@
                         <p class="footer__content-title">
                             Thông tin
                         </p>
-                        <p style="display: inline block;"> <p style="color: red ;">Gửi phàn hồi:</p>Truy cập đường link <a href="www.gopy.vn">www.gopy.vn</a></p>
+                        <p style="display: inline block;"> <p style="color: red ;">Gửi phản hồi:</p>Truy cập đường link <a href="www.gopy.vn">www.gopy.vn</a></p>
                         <p> Truy cập page để biết thêm thông tin chi tiết <a href="#"> <i class="fa fa-facebook" aria-hidden="true"></i></a></p>
-                        
-                   
                     </div>
                     <div class="col-9 col-sm-6 footer__content-item">
                         <p class="footer__content-title">
@@ -182,7 +179,6 @@
                         </p>
                         <p>Người phát triển WEB: Nguyễn Đức Ân</p>
                         <p style="font-size: 35px; color: black;">0123456789</p>
-                       
                     </div>
                 </div>
             </div>
