@@ -113,7 +113,7 @@ section .cards .card-image img {
     margin-top: 20px;
 }
 
-.cards .button button {
+.cards .button a {
     background: #82c1fa;
     outline: none;
     border: none;
@@ -125,7 +125,7 @@ section .cards .card-image img {
     cursor: pointer;
 }
 
-.button button:hover {
+.button a:hover {
     background: #4b0b9f;
 }
 
