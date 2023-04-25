@@ -53,19 +53,29 @@
         </div>
     </section>
     <main>
-        <div class="container">
+        <div class="container test-background">
             <div class="list-topic__filter">
             </div>
             <div class="list list-topic__content">
-                <div class="topic-item col-12 col-md-5">Khởi động 1: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5">Khởi động 2: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5">Khởi động 3: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5">Khởi động 4: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5">Khởi động 5: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5">Khởi động 6: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5">Khởi động 7: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5">Khởi động 8: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5">Khởi động 9: Các số 1,2,3</div>
+                <div class="topic-item col-12 col-md-5" topic="1">Khởi động 1: Các số 1,2,3</div>
+                <div class="topic-item col-12 col-md-5" topic="2">Khởi động 2: Các số 1,2,3</div>
+                <div class="topic-item col-12 col-md-5" topic="3">Khởi động 3: Các số 1,2,3</div>
+                <div class="topic-item col-12 col-md-5" topic="4">Khởi động 4: Các số 1,2,3</div>
+                <div class="topic-item col-12 col-md-5" topic="5">Khởi động 5: Các số 1,2,3</div>
+                <div class="topic-item col-12 col-md-5" topic="6">Khởi động 6: Các số 1,2,3</div>
+                <div class="topic-item col-12 col-md-5" topic="7">Khởi động 7: Các số 1,2,3</div>
+                <div class="topic-item col-12 col-md-5" topic="8">Khởi động 8: Các số 1,2,3</div>
+                <div class="topic-item col-12 col-md-5" topic="9">Khởi động 9: Các số 1,2,3</div>
+                <div class="topic-item col-12 col-md-5" topic="10">Khởi động 10: Các số 1,2,3</div>
+                <div class="topic-item col-12 col-md-5" topic="12">Khởi động 12: Các số 1,2,3</div>
+                <div class="topic-item col-12 col-md-5" topic="13">Khởi động 13: Các số 1,2,3</div>
+                <div class="topic-item col-12 col-md-5" topic="14">Khởi động 14: Các số 1,2,3</div>
+                <div class="topic-item col-12 col-md-5" topic="15">Khởi động 15: Các số 1,2,3</div>
+                <div class="topic-item col-12 col-md-5" topic="16">Khởi động 16: Các số 1,2,3</div>
+                <div class="topic-item col-12 col-md-5" topic="17">Khởi động 17: Các số 1,2,3</div>
+                <div class="topic-item col-12 col-md-5" topic="18">Khởi động 18: Các số 1,2,3</div>
+                <div class="topic-item col-12 col-md-5" topic="19">Khởi động 19: Các số 1,2,3</div>
+                <button onclick="AllTopics('show')">ShowAllTopic</button>
             </div>
             <ul class="listPage">
             </ul>
@@ -86,7 +96,7 @@
                         }
                     })
                     listPage();
-                }
+                } 
                 loadItem();
                 function listPage(){
                     let count = Math.ceil(list.length / limit);
@@ -121,9 +131,6 @@
                     loadItem();
                 }
             </script>
-            <div>
-            
-            </div>
         </div>
     </main>
 
@@ -156,5 +163,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="../js/calculator.js""></script>
 </body>
 </html>

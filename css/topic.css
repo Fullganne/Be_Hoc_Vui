@@ -1,10 +1,12 @@
 /* ---------------------------------------------------TOPIC--------------------------------------------------- */
 .list-topic__wrap {
-    background: #ffac11;
+    background-color: #ffac11;
     padding-top: 100px;
     padding-bottom: 100px;
 }
 
+
+/* ---------------- FILTER ---------------- */
 .list-topic__filter {
     border-radius: 4px;
     background-color: #fff;
@@ -52,15 +54,14 @@
 .list-topic__filter-chooselevel label {
     cursor: pointer;
 }
+
 .list-topic__filter-level:hover .list-topic__filter-chooselevel {
     display: block;
 }
 
-.list-topic__content-item {
-    margin-bottom: 1rem !important;
-    display: flex;
-}
 
+
+/* ---------------- ITEMS ---------------- */
 .list-topic__content .topic-item {
     background-color: #fff;
     padding: 1rem;
@@ -72,6 +73,33 @@
     color: rgb(255, 255, 255);
     display: block;
 }
+
+.list-topic__content .topic-item {
+    background: url("https://z-p3-scontent.fsgn5-8.fna.fbcdn.net/v/t1.15752-9/296051400_3189724034621816_6794827247594004239_n.png?_nc_cat=109&ccb=1-7&_nc_sid=ae9488&_nc_ohc=dmwlkEyuy2kAX-mm_v_&_nc_ht=z-p3-scontent.fsgn5-8.fna&oh=03_AdRiCjz2PMUC7pkbBUrVosJp-N_sdr1olfBo4OO1t-HM8A&oe=646ED295");
+    background-position: 60% 55%;
+    background-size: 70%;
+}
+
+.list-topic__content .topic-item.learned {
+    background: url("https://z-p3-scontent.fsgn5-12.fna.fbcdn.net/v/t1.15752-9/324989261_1881636768876454_2682064489309307576_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=ae9488&_nc_ohc=oDWmbwa6w8AAX8FLbqk&_nc_ht=z-p3-scontent.fsgn5-12.fna&oh=03_AdQmY0kPr3Zi-Ll3ynHm-cxKD3HXUnBm_2mTQWDHKbNIyg&oe=646EEF1A");
+}
+
+.list-topic__content .topic-item.went-off:nth-child(odd) {
+    animation: SlideToLeft ease-in-out 1000ms forwards;
+}
+
+.list-topic__content .topic-item:nth-child(odd) {
+    animation: SlideInFromLeft ease-in-out 1000ms forwards;
+}
+
+.list-topic__content .topic-item.went-off:nth-child(even) {
+    animation: SlideToRight ease-in-out 1000ms forwards;
+}
+
+.list-topic__content .topic-item:nth-child(even) {
+    animation: SlideInFromRight ease-in-out 1000ms forwards;
+}
+
 
 .list-topic__content .item__title {
     color: #0e2c53;
@@ -146,4 +174,48 @@
     flex-wrap: wrap;
     justify-content: center;
 
+}
+
+
+
+
+@keyframes SlideToLeft {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100vw));
+    }
+}
+
+@keyframes SlideToRight {
+    from {
+        transform: translateX(0);
+    }
+
+    
+    to {
+        transform: translateX(100vw);
+    }
+}
+
+@keyframes SlideInFromRight {
+    from {
+        transform: translateX(100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes SlideInFromLeft {
+    from {
+        transform: translateX(-100vw);
+    }
+
+    to {
+        transform: translateX(0);
+    }
 }
