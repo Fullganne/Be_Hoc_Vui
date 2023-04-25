@@ -177,52 +177,6 @@ section {
     color: #0e2c53;
 }
 
-.vip {
-    background-color: #fff8eb;
-}
-
-.vip-wrapper {
-    padding: 80px 0;
-}
-
-.vip__title {
-    text-align: center;
-    color: #0e2c53;
-    font-weight: bolder;
-    text-transform: capitalize;
-    margin-bottom: 2rem;
-}
-
-.vip__img {
-    margin-bottom: 1rem;
-}
-
-.vip__item {
-    background-color: #fff;
-    padding: 40px 30px 50px;
-}
-
-.vip__item-wrap {
-    max-width: calc(25% - 24px);
-    flex: 0 0 calc(25% - 24px);
-    margin-right: 24px;
-    margin-bottom: 1rem;
-}
-
-.vip__item-wrap:hover {
-    transition: box-shadow 0.1s ease-in-out 0.1s;
-    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
-}
-
-.vip__content {
-    text-align: center;
-}
-
-.vip__content h5 {
-    color: #0e2c53;
-}
-
-
 
 @media all and (max-width: 576px) {
     .banner {
@@ -256,12 +210,6 @@ section {
     }
     .grade__content-item h5 {
         margin-top: 0.8rem;
-    }
-
-    .vip__item-wrap {
-        max-width: 100% !important;
-        flex-basis: 100% !important;
-        margin-bottom: 2rem;
     }
 
     .footer {
@@ -312,9 +260,7 @@ section {
         padding-top: 1.2rem;
         padding-bottom: 1.2rem;
     }
-    .header__mobile__buyvip a {
-        color: #002c9d !important;
-    }
+
     .header__mobile__logo {
         margin-right: 5rem;
     }
@@ -388,13 +334,6 @@ section {
         padding: 0.5rem;
         font-size: 14px;
         width: 100%;
-    }
-    .list-topic__filter-choosevip {
-        padding: 0.5rem;
-        font-size: 14px;
-        width: 100%;
-        top: 30px;
-        left: 0;
     }
 }
 
@@ -511,11 +450,13 @@ section {
 }
 
 
+
 @media all and (min-width: 1000px) {
     .header-wrapper {
         justify-content: space-between;
         align-items: center;
     }
+
     .header__logo {
         margin: 0;
     }
@@ -523,26 +464,19 @@ section {
     .list-topic__filter {
         padding: 15px 0;
     }
+
     .list-topic__filter-item {
         padding-bottom: 0.5rem;
     }
+
     .list-topic__filter-chooselevel {
         padding: 0.5rem;
         font-size: 14px;
         width: 100%;
     }
-    .list-topic__filter-choosevip {
-        padding: 0.5rem;
-        font-size: 14px;
-        width: 100%;
-        top: 30px;
-        left: 0;
-    }
 }
 @media all and (min-width: 540px) {
-    .vip__item-wrap {
-        margin-right: 0;
-    }
+    /* EMPTY */
 }
 @media all and (min-width: 1000px) and (max-width: 1380px) {
     .about-wrapper::before {
@@ -556,11 +490,14 @@ section {
     }
 }
 
+
+
 .listPage {
     padding: 10px;
     text-align: center;
     list-style: none;
 }
+
 .listPage li {
     background-color: gray;
     padding: 20px;
@@ -570,11 +507,13 @@ section {
     position: fixed;
     margin-top: 25px;
 }
+
 .listPage {
     padding: 10px;
     text-align: center;
     list-style: none;
 }
+
 .listPage li{
     background-color: gray;
     padding: 20px;
@@ -583,19 +522,8 @@ section {
     cursor: pointer;
     color: #fff;
 }
+
 .listPage .active{
     background-color: #B129EF;
     color: #fff;
-}
-
-.list-topic__content {
-    margin-bottom: 1rem !important;
-    display: flex  ;
-    flex-direction: column 1 1;
-    flex-wrap: wrap;
-    justify-content: center;
-
-}
-.list-topic__content .item-wrap{
-    margin: 10px 10px;
 }
