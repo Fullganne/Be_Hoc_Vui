@@ -4,6 +4,13 @@
 @import "./auth.css";
 @import "./calculator.css";
 
+
+@font-face {
+    font-family: 'DigitalFont';
+    src: url('../assets/fonts/digital-7.ttf');
+}
+
+
 *,
 ::before,
 ::after {
@@ -141,6 +148,9 @@ section {
     background-position: 50% 30%;
 }
 
+#main-container {
+    position: relative;
+}
 
 .footer {
     background: url("http://labartisan.net/demo/kitton/assets/images/footer/footer-bg.jpg");

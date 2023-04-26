@@ -6,7 +6,7 @@
     <title>Bé học vui</title>
 
     <!-- SELF RESOURCE -->
-    <link rel="icon" type="img/png" href="../storage/favicon.png">
+    <link rel="icon" type="img/png" href="../assets/logo.png">
     <link rel="stylesheet" href="../css/style.css">
 
 
@@ -24,7 +24,7 @@
         <div class="container">
             <div class="header-wrapper row">
                 <div class="header__logo">
-                    <a href="../index.html"><img src="../storage/logo.png" alt="Logo" class="img-fluid" style="object-fit:contain; width:150px; height:150px;"></a>
+                    <a href="../index.html"><img src="../assets/logo.png" alt="Logo" class="img-fluid" style="object-fit:contain; width:150px; height:150px;"></a>
                 </div>
                 <div class="header__menu">
                     <div class="container">
@@ -52,7 +52,7 @@
             </div>
         </div>
     </section>
-    <main>
+    <main id="main-container">
         <div class="container test-background">
             <div class="list-topic__filter">
             </div>
@@ -132,8 +132,35 @@
                 }
             </script>
         </div>
+        <div id="calculator">
+            <div id="display-section">
+                <div id="timer">Not yet</div>
+                <div id="screen">
+                    <span id="equation">12 + 39 + 48 =</span>
+                    <span id="user-answer">98</span>
+                </div>
+                <div id="indicator">
+                    <div id="incorrect"></div>
+                    <div id="score">8/10</div>
+                    <div id="correct"></div>
+                </div>
+            </div>
+            <div id="input-section">
+                <button onclick="userSubmit(1)" class="button-item">1</button>
+                <button onclick="userSubmit(2)" class="button-item">2</button>
+                <button onclick="userSubmit(3)" class="button-item">3</button>
+                <button onclick="userSubmit(4)" class="button-item">4</button>
+                <button onclick="userSubmit(5)" class="button-item">5</button>
+                <button onclick="userSubmit(6)" class="button-item">6</button>
+                <button onclick="userSubmit(7)" class="button-item">7</button>
+                <button onclick="userSubmit(8)" class="button-item">8</button>
+                <button onclick="userSubmit(9)" class="button-item">9</button>
+                <button onclick="userSubmit('restart')" class="button-item">Restart</button>
+                <button onclick="userSubmit(0)" class="button-item">0</button>
+                <button onclick="userSubmit('backspace')" class="button-item"><=</button>
+            </div>
+        </div>
     </main>
-
 
 
 
@@ -149,8 +176,16 @@
                         <p class="footer__content-title">
                             Thông tin
                         </p>
-                        <p style="display: inline block;"> <p style="color: red ;">Gửi phản hồi:</p>Truy cập đường link <a href="www.gopy.vn">www.gopy.vn</a></p>
-                        <p> Truy cập page để biết thêm thông tin chi tiết <a href="#"> <i class="fa fa-facebook" aria-hidden="true"></i></a></p>
+                        <p style="display: inline block;">
+                            <p style="color: red ;">Gửi phản hồi:</p>
+                            <p>
+                                Truy cập đường link
+                                <a href="www.gopy.vn">www.gopy.vn</a>
+                            </p>
+                        </p>
+                        <p>
+                            Truy cập page để biết thêm thông tin chi tiết <a href="#"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </p>
                     </div>
                     <div class="col-9 col-sm-6 footer__content-item">
                         <p class="footer__content-title">
@@ -164,6 +199,7 @@
         </div>
     </footer>
 
-    <script src="../js/calculator.js""></script>
+    <script src="../js/main-script.js"></script>
+    <script src="../js/calculator.js"></script>
 </body>
 </html>
