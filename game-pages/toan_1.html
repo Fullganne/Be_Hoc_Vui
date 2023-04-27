@@ -57,24 +57,24 @@
             <div class="list-topic__filter">
             </div>
             <div class="list list-topic__content">
-                <div class="topic-item col-12 col-md-5" topic="1">Khởi động 1: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5" topic="2">Khởi động 2: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5" topic="3">Khởi động 3: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5" topic="4">Khởi động 4: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5" topic="5">Khởi động 5: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5" topic="6">Khởi động 6: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5" topic="7">Khởi động 7: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5" topic="8">Khởi động 8: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5" topic="9">Khởi động 9: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5" topic="10">Khởi động 10: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5" topic="12">Khởi động 12: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5" topic="13">Khởi động 13: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5" topic="14">Khởi động 14: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5" topic="15">Khởi động 15: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5" topic="16">Khởi động 16: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5" topic="17">Khởi động 17: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5" topic="18">Khởi động 18: Các số 1,2,3</div>
-                <div class="topic-item col-12 col-md-5" topic="19">Khởi động 19: Các số 1,2,3</div>
+                <button>Khởi động 1: Các số 1,2,3</button>
+                <button>Khởi động 2: Các số 1,2,3</button>
+                <button>Khởi động 3: Các số 1,2,3</button>
+                <button>Khởi động 4: Các số 1,2,3</button>
+                <button>Khởi động 5: Các số 1,2,3</button>
+                <button>Khởi động 6: Các số 1,2,3</button>
+                <button>Khởi động 7: Các số 1,2,3</button>
+                <button>Khởi động 8: Các số 1,2,3</button>
+                <button>Khởi động 9: Các số 1,2,3</button>
+                <button>Khởi động 10: Các số 1,2,3</button>
+                <button>Khởi động 12: Các số 1,2,3</button>
+                <button>Khởi động 13: Các số 1,2,3</button>
+                <button>Khởi động 14: Các số 1,2,3</button>
+                <button>Khởi động 15: Các số 1,2,3</button>
+                <button>Khởi động 16: Các số 1,2,3</button>
+                <button>Khởi động 17: Các số 1,2,3</button>
+                <button>Khởi động 18: Các số 1,2,3</button>
+                <button>Khởi động 19: Các số 1,2,3</button>
                 <button onclick="AllTopics('show')">ShowAllTopic</button>
             </div>
             <ul class="listPage">
@@ -136,28 +136,52 @@
             <div id="display-section">
                 <div id="timer">Not yet</div>
                 <div id="screen">
-                    <span id="equation">12 + 39 + 48 =</span>
-                    <span id="user-answer">98</span>
+                    <span id="equation">Sample Equation = </span>
+                    <span id="user-answer">?</span>
                 </div>
                 <div id="indicator">
                     <div id="incorrect"></div>
-                    <div id="score">8/10</div>
+                    <div id="score">0/10</div>
                     <div id="correct"></div>
                 </div>
             </div>
             <div id="input-section">
-                <button onclick="userSubmit(1)" class="button-item">1</button>
-                <button onclick="userSubmit(2)" class="button-item">2</button>
-                <button onclick="userSubmit(3)" class="button-item">3</button>
-                <button onclick="userSubmit(4)" class="button-item">4</button>
-                <button onclick="userSubmit(5)" class="button-item">5</button>
-                <button onclick="userSubmit(6)" class="button-item">6</button>
-                <button onclick="userSubmit(7)" class="button-item">7</button>
-                <button onclick="userSubmit(8)" class="button-item">8</button>
-                <button onclick="userSubmit(9)" class="button-item">9</button>
-                <button onclick="userSubmit('restart')" class="button-item">Restart</button>
-                <button onclick="userSubmit(0)" class="button-item">0</button>
-                <button onclick="userSubmit('backspace')" class="button-item"><=</button>
+                <div class="btn-container">
+                    <button onclick="userSubmit(1)" class="button-item">1</button>
+                </div>
+                <div class="btn-container">
+                    <button onclick="userSubmit(2)" class="button-item">2</button>
+                </div>
+                <div class="btn-container">
+                    <button onclick="userSubmit(3)" class="button-item">3</button>
+                </div>
+                <div class="btn-container">
+                    <button onclick="userSubmit(4)" class="button-item">4</button>
+                </div>
+                <div class="btn-container">
+                    <button onclick="userSubmit(5)" class="button-item">5</button>
+                </div>
+                <div class="btn-container">
+                    <button onclick="userSubmit(6)" class="button-item">6</button>
+                </div>
+                <div class="btn-container">
+                    <button onclick="userSubmit(7)" class="button-item">7</button>
+                </div>
+                <div class="btn-container">
+                    <button onclick="userSubmit(8)" class="button-item">8</button>
+                </div>
+                <div class="btn-container">
+                    <button onclick="userSubmit(9)" class="button-item">9</button>
+                </div>
+                <div class="btn-container">
+                    <button onclick="userSubmit('restart')"class="button-item">Restart</button>
+                </div>
+                <div class="btn-container">
+                    <button onclick="userSubmit(0)" class="button-item">0</button>
+                </div>
+                <div class="btn-container">
+                    <button onclick="userSubmit('backspace')" class="button-item"><=</button>
+                </div>
             </div>
         </div>
     </main>
@@ -200,6 +224,7 @@
     </footer>
 
     <script src="../js/main-script.js"></script>
+    <script src="../js/topics-loading.js"></script>
     <script src="../js/calculator.js"></script>
 </body>
 </html>
