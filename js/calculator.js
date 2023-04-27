@@ -48,10 +48,32 @@ let wantedResult = randomRange(0, 9);
 finalResult.innerHTML = wantedResult;
 
 function openCalculator(grade = 1) {
-
+    generateEquation(wantedResult);
 }
 
+function generateEquation(wantedFinalResult, complexity=5) {
+    let amount = randomRange(1,4);
+    let finalNum = wantedFinalResult;
 
+    //SHOULD NOT USE EVAL DUE TO BEING EXPOSED TO HIGH PROBABILITY OF SECURITY BREACH
+
+    reverseCalculate(finalNum, randomRange(1,100), amount, complexity);
+}
+
+function reverseCalculate(orgNum, newNum, amount, complexity) { //A recursive function to generate equations from a chosen Num
+    if (amount == 0) {
+        return orgNum;
+    }
+    
+    if (newNum >= orgNum) {
+        return reverseCalculate(newNum, randomRange(1,100), --amount, complexity) + ` - ${newNum - orgNum}`;
+    }
+
+    if (newNum < orgNum) {
+        return reverseCalculate(newNum, randomRange(1,100), --amount, complexity) + ` + ${orgNum - newNum}`;
+    }
+}
+console.log(reverseCalculate(5, 10, 4, 5));
 
 
 function userSubmit(value) {
