@@ -1,63 +1,29 @@
-const topics = document.querySelectorAll(".topic-item");
-
-topics.forEach((ele) => {
-    ele.addEventListener("click", () => {
-        ele.classList.add("learned");
-        AllTopics("hidden");
-        openCalculator(ele.getAttribute("topic")); //White the corresponding topic
-    })
-});
-
-function AllTopics(state) {
-    if (state == "show") {
-        topics.forEach(topic => {
-            topic.classList.remove("went-off");
-            console.log("show");
-        })
-    }
-
-    if (state == "hidden") {
-        topics.forEach(topic => {
-            topic.classList.add("went-off");
-            topic.classList.remove("ông-già");
-        })
-    }
-
-    return;
-};
-
-
-
-
+let wantedResult = "NO VALUE YET";
 
 const mainContainer = document.getElementById("main-container");
 const calculator = document.getElementById("calculator");
 
 const equation = document.getElementById("equation");
-const finalResult = document.getElementById("user-answer");
+const resultContainer = document.getElementById("user-answer");
 
 const correctIndicator = document.getElementById("correct");
 const incorrectIndicator = document.getElementById("incorrect");
+const scoreIndicator = document.getElementById("score");
 
 /* -------------------- LOGIC -------------------- */
-const operatorList = ["+", "-", "*", "/"];
-
-let wantedResult = randomRange(0, 9);
-
-
-finalResult.innerHTML = wantedResult;
-
-function openCalculator(grade = 1) {
-    generateEquation(wantedResult);
+function openCalculator(grade = 1, topic = 1) {
+    wantedResult = randomRange(0, 9);
+    generateEquation(wantedResult, 2);
 }
 
-function generateEquation(wantedFinalResult, complexity=5) {
-    let amount = randomRange(1,4);
-    let finalNum = wantedFinalResult;
+function generateEquation(wantedFinalResult, amount = 3, complexity = 5) {
+    // amount = randomRange(1,4);
+    resultContainer.innerHTML = "?";
 
     //SHOULD NOT USE EVAL DUE TO BEING EXPOSED TO HIGH PROBABILITY OF SECURITY BREACH
 
-    reverseCalculate(finalNum, randomRange(1,100), amount, complexity);
+    equation.innerHTML = reverseCalculate(wantedFinalResult, randomRange(1,100), amount, complexity) + " = ";
+    // resultContainer.innerHTML = wantedFinalResult;
 }
 
 function reverseCalculate(orgNum, newNum, amount, complexity) { //A recursive function to generate equations from a chosen Num
@@ -73,7 +39,6 @@ function reverseCalculate(orgNum, newNum, amount, complexity) { //A recursive fu
         return reverseCalculate(newNum, randomRange(1,100), --amount, complexity) + ` + ${orgNum - newNum}`;
     }
 }
-console.log(reverseCalculate(5, 10, 4, 5));
 
 
 function userSubmit(value) {
@@ -82,6 +47,8 @@ function userSubmit(value) {
         setTimeout(() => {
             correctIndicator.classList.remove("active")} 
         , 1500);
+
+        resultContainer.innerHTML = wantedResult;
         return;
     }
 
@@ -90,6 +57,8 @@ function userSubmit(value) {
     setTimeout(() => {
         incorrectIndicator.classList.remove("active")} 
     , 1500);
+
+    resultContainer.innerHTML = wantedResult;
     return;
 }
 

@@ -44,6 +44,7 @@
     font-family: 'DigitalFont';
     font-size: 36px;
     font-weight: 500;
+    margin-left: 8px;
 }
 
 #indicator {
@@ -104,6 +105,15 @@
     grid-template-rows: repeat(4, 1fr);
 }
 
+#input-section > .btn-container {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #input-section .button-item {
     max-width: 120px;
+    width: 80%;
+    height: 72%;
 }
