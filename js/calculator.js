@@ -14,6 +14,7 @@ const scoreIndicator = document.getElementById("score");
 function openCalculator(grade = 1, topic = 1) {
     wantedResult = randomRange(0, 9);
     generateEquation(wantedResult, 2);
+    document.getElementById("calculator").style.display = "flex";
 }
 
 function generateEquation(wantedFinalResult, amount = 3, complexity = 5) {
@@ -45,9 +46,7 @@ function userSubmit(value) {
     if (value == wantedResult) {
         correctIndicator.classList.add("active");
         setTimeout(() => {
-            correctIndicator.classList.remove("active")} 
-        , 1500);
-
+            correctIndicator.classList.remove("active")}, 1500);
         resultContainer.innerHTML = wantedResult;
         return;
     }

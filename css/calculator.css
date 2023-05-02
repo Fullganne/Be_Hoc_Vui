@@ -2,7 +2,7 @@
 
 #calculator {
     position: absolute;
-    display: flex;
+    display: none;
     flex-direction: column;
     top: 50%;
     left: 50%;

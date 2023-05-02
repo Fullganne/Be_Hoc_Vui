@@ -1,4 +1,4 @@
-var swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".mySwiper", {
 	slidesPerView: 3,
 	spaceBetween: 25,
 	loop: true,
@@ -9,6 +9,7 @@ var swiper = new Swiper(".mySwiper", {
 		el: ".swiper-pagination",
 		clickable: true,
 		dynamicBullets: true,
+		dynamicMainBullets: 3,
 	},
 	navigation: {
 		nextEl: ".swiper-button-next",
