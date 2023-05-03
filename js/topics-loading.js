@@ -33,7 +33,6 @@ function AllTopics(state) {
     if (state == "show") {
         topics.forEach(topic => {
             topic.classList.remove("went-off");
-            console.log("show");
         })
         document.getElementById("calculator").style.display = "none";
     }
@@ -41,7 +40,6 @@ function AllTopics(state) {
     if (state == "hidden") {
         topics.forEach(topic => {
             topic.classList.add("went-off");
-            topic.classList.remove("ông-già");
         })
     }
 

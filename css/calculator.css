@@ -1,4 +1,19 @@
 /* 🗿 */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+.not-yet::after {
+    content: "Chức năng này hiện chưa hoàn thành";
+
+    position: absolute;
+    top: 80px;
+    left: 400px;
+    background-color: #ff3300;
+    z-index: 10;
+}
+
+.not-yet:hover:after {
+    display: flex;
+}
 
 #calculator {
     position: absolute;
@@ -7,44 +22,61 @@
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    background-color: brown;
     width: 60vw;
-    max-width: 600px;
+    max-width: 500px;
     height: 90vh;
     max-height: 720px;
+    overflow: hidden;
+    box-shadow: 3px 3px 10px rgb(30, 30, 30);
+    background-color: rgb(80, 80, 80);
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
 }
 
 #display-section {
     display: flex;
     flex-direction: column;
-    padding: 24px;
-    height: 30%;
+    background-color: rgb(34, 34, 34);
+    padding: 20px;
+    height: 32%;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0);
+    border-radius: 24px;
 }
 
 #timer {
     height: 24px;
     width: 100%;
-    background-color: aliceblue;
     text-align: center;
     line-height: 24px;
 }
 
-#screen {
-    height: 80px;
+#screen-container {
+    background-color: #f0f0f0;
     padding: 16px;
-    margin: 16px 0px;
-    width: 100%;
-    background-color: blanchedalmond;
-    display: flex;
-    justify-content: end;
+    margin: 8px 0px;
+    border-radius: 8px;
 }
 
+#screen {
+    height: 80px;
+    padding: 8px;
+    width: 100%;
+    background-color: rgb(130, 137, 133);
+    display: flex;
+    justify-content: end;
+    border-radius: 8px;
+}
 
 #screen span {
     font-family: 'DigitalFont';
-    font-size: 36px;
+    font-size: 64px;
+    text-justify: center;
     font-weight: 500;
     margin-left: 8px;
+    line-height: 80px;
+    /* background-color: #ff3300; */
 }
 
 #indicator {
@@ -52,7 +84,6 @@
     flex-direction: row;
     height: 24px;
     width: 100%;
-    background-color: cornflowerblue;
     justify-content: space-around;
     align-items: center;
 }
@@ -93,26 +124,39 @@
     box-shadow: 0px 0px 12px 6px #ff3300;
 }
 
+#indicator #score {
+    margin-top: 4px; 
+    background-color: #adadad;
+    box-shadow: inset 0px 0px 8px 4px rgba(50, 50, 50);
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    padding: 4px 20px;
+    border-radius: 8px;
+}
 
 
 #input-section {
     display: grid;
     gap: 12px;
-    background-color: rgb(152, 185, 121);
-    padding: 64px;
-    height: 70%;
+    padding: 32px;
+    height: 68%;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
 }
 
 #input-section > .btn-container {
-    background-color: antiquewhite;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #input-section .button-item {
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    color: white;
+    background: radial-gradient(#404040, #202020);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0);
     max-width: 120px;
     width: 80%;
     height: 72%;
