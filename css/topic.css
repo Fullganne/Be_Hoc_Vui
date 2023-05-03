@@ -1,3 +1,15 @@
+#main-container.topic {
+    /* background: url("https://media.istockphoto.com/id/628370726/vector/seamless-vector-pattern-different-numbers.jpg?s=612x612&w=0&k=20&c=r0mVHEL3HrDzgj5Q3GpRUtEt91nSscb5yCz0gUrZ67c="); */
+    background: #5d6978;
+    background-size: 200%;
+    overflow: hidden;
+    min-height: 800px;
+}
+
+.topic-container {
+    overflow: hidden;
+}
+
 /* ---------------------------------------------------TOPIC--------------------------------------------------- */
 .list-topic__wrap {
     background-color: #ffac11;
@@ -13,10 +25,9 @@
     box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.06);
     justify-content: center;
     margin-bottom: 30px;
-    padding: 15px 30px;
+    padding: 16px 50px;
+    margin: 16px 0px;
     text-align: center;
-    padding-left: 50px;
-    padding-right: 50px;
     position: relative;
     z-index: 1;
 }
@@ -83,13 +94,15 @@
 }
 
 .list-topic__content .topic-item.learned {
-    color: rgb(136, 255, 207);
+    color: #fff;
     text-shadow:  20px 20px 20px #000;
-    background: url("https://static8.depositphotos.com/1006106/892/v/450/depositphotos_8921838-stock-illustration-school.jpg");
+    /* background: url("https://static8.depositphotos.com/1006106/892/v/450/depositphotos_8921838-stock-illustration-school.jpg"); */
+    /* TO HARD TO SEE TEXT  */
+    background: #0e2c53;
 }
 
 .list-topic__content .topic-item.went-off:nth-child(odd) {
-    animation: SlideToLeft ease-in-out 1000ms forwards;
+    animation: SlideOutToLeft ease-in-out 1000ms forwards;
 }
 
 .list-topic__content .topic-item:nth-child(odd) {
@@ -97,7 +110,7 @@
 }
 
 .list-topic__content .topic-item.went-off:nth-child(even) {
-    animation: SlideToRight ease-in-out 1000ms forwards;
+    animation: SlideOutToRight ease-in-out 1000ms forwards;
 }
 
 .list-topic__content .topic-item:nth-child(even) {
@@ -183,7 +196,7 @@
 
 
 
-@keyframes SlideToLeft {
+@keyframes SlideOutToLeft {
     from {
         transform: translateX(0);
     }
@@ -193,7 +206,7 @@
     }
 }
 
-@keyframes SlideToRight {
+@keyframes SlideOutToRight {
     from {
         transform: translateX(0);
     }

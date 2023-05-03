@@ -5,7 +5,7 @@ const topics = [];
 //     topic.classList.add("topic-item col-12 col-md-5");
 // })
 
-for(let i = 0; i < topicList.children.length - 1; ++i) {
+for(let i = 0; i < topicList.children.length; ++i) {
     topics[i] = topicList.children[i];
 }
 
@@ -33,15 +33,19 @@ function AllTopics(state) {
     if (state == "show") {
         topics.forEach(topic => {
             topic.classList.remove("went-off");
-            console.log("show");
         })
-        document.getElementById("calculator").style.display = "none";
+        calculator.classList.add("calculator-hide");
+        setTimeout(() => {
+            calculator.style.display = "none";
+        }, 750);
     }
 
     if (state == "hidden") {
         topics.forEach(topic => {
             topic.classList.add("went-off");
-            topic.classList.remove("ông-già");
+            setTimeout(() => {
+                calculator.style.display = "flex";
+            }, 750);
         })
     }
 

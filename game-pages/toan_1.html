@@ -52,8 +52,8 @@
             </div>
         </div>
     </section>
-    <main id="main-container">
-        <div class="container test-background">
+    <main id="main-container" class="topic">
+        <div class="container topic-container">
             <div class="list-topic__filter">
             </div>
             <div class="list list-topic__content">
@@ -67,15 +67,6 @@
                 <button>Khởi động 8: Các số 1,2,3</button>
                 <button>Khởi động 9: Các số 1,2,3</button>
                 <button>Khởi động 10: Các số 1,2,3</button>
-                <button>Khởi động 12: Các số 1,2,3</button>
-                <button>Khởi động 13: Các số 1,2,3</button>
-                <button>Khởi động 14: Các số 1,2,3</button>
-                <button>Khởi động 15: Các số 1,2,3</button>
-                <button>Khởi động 16: Các số 1,2,3</button>
-                <button>Khởi động 17: Các số 1,2,3</button>
-                <button>Khởi động 18: Các số 1,2,3</button>
-                <button>Khởi động 19: Các số 1,2,3</button>
-                <button onclick="AllTopics('show')">ShowAllTopic</button>
             </div>
             <ul class="listPage">
             </ul>
@@ -132,12 +123,14 @@
                 }
             </script>
         </div>
-        <div id="calculator">
+        <div id="calculator" class="calculator-hide">
             <div id="display-section">
                 <div id="timer">Not yet</div>
-                <div id="screen">
-                    <span id="equation">Sample Equation = </span>
-                    <span id="user-answer">?</span>
+                <div id="screen-container">
+                    <div id="screen">
+                        <span id="equation">Sample Equation = </span>
+                        <span id="user-answer">?</span>
+                    </div>
                 </div>
                 <div id="indicator">
                     <div id="incorrect"></div>
@@ -179,9 +172,9 @@
                 <div class="btn-container">
                     <button onclick="userSubmit(0)" class="button-item">0</button>
                 </div>
-                <div class="btn-container">
-                    <button onclick="userSubmit('backspace')" class="button-item"><=</button>
-                </div>
+                <!-- <div class="btn-container">
+                    <button onclick="userSubmit('backspace')" class="button-item not-yet"><=</button>
+                </div> -->
             </div>
         </div>
     </main>

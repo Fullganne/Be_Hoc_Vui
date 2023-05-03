@@ -142,12 +142,6 @@ section {
     left: 45%;
 }
 
-
-.test-background {
-    background: url("https://media.istockphoto.com/id/628370726/vector/seamless-vector-pattern-different-numbers.jpg?s=612x612&w=0&k=20&c=r0mVHEL3HrDzgj5Q3GpRUtEt91nSscb5yCz0gUrZ67c=");
-    background-position: 50% 30%;
-}
-
 #main-container {
     position: relative;
 }
@@ -456,7 +450,7 @@ section {
         width: 50%;
     }
 }
-@media all and (min-width: 200px){
+@media all and (min-width: 200px) {
 	.grade-selector{
         background-color: #fef8eb;
 		display: flex;
@@ -487,7 +481,7 @@ section {
     list-style: none;
 }
 
-.listPage li{
+.listPage li {
     background-color: gray;
     padding: 20px;
     display: inline-block;
@@ -496,7 +490,7 @@ section {
     color: #fff;
 }
 
-.listPage .active{
+.listPage .active {
     background-color: #B129EF;
     color: #fff;
 }
