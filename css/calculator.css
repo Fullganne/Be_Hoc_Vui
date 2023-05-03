@@ -15,25 +15,7 @@
     display: flex;
 }
 
-#calculator {
-    position: absolute;
-    display: none;
-    flex-direction: column;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    width: 60vw;
-    max-width: 500px;
-    height: 90vh;
-    max-height: 720px;
-    overflow: hidden;
-    box-shadow: 3px 3px 10px rgb(30, 30, 30);
-    background-color: rgb(80, 80, 80);
-    border-top-right-radius: 24px;
-    border-top-left-radius: 24px;
-    border-bottom-right-radius: 12px;
-    border-bottom-left-radius: 12px;
-}
+
 
 #display-section {
     display: flex;
@@ -71,8 +53,7 @@
 
 #screen span {
     font-family: 'DigitalFont';
-    font-size: 64px;
-    text-justify: center;
+    font-size: 48px;
     font-weight: 500;
     margin-left: 8px;
     line-height: 80px;
@@ -128,9 +109,9 @@
     margin-top: 4px; 
     background-color: #adadad;
     box-shadow: inset 0px 0px 8px 4px rgba(50, 50, 50);
-    font-family: 'Nunito', sans-serif;
-    font-size: 18px;
-    padding: 4px 20px;
+    font-family: 'DigitalFont';
+    font-size: 24px;
+    padding: 0px 20px;
     border-radius: 8px;
 }
 
@@ -160,4 +141,52 @@
     max-width: 120px;
     width: 80%;
     height: 72%;
+}
+
+#calculator {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    max-width: 500px;
+    height: 90vh;
+    max-height: 720px;
+    overflow: hidden;
+    box-shadow: 3px 3px 10px rgb(30, 30, 30);
+    background-color: rgb(80, 80, 80);
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    animation: CalculatorSlideInFromBottom 600ms ease-in-out forwards;
+    left: 50%;
+}
+
+#calculator.calculator-hide {
+    animation: CalculatorSlideOutToBottom 1000ms ease-in-out forwards;
+}
+
+@keyframes CalculatorSlideInFromBottom {
+    from {
+        top: 100vh;
+        transform: translateY(100%) translateX(-50%);
+    }
+
+    to {
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+    }
+}
+
+@keyframes CalculatorSlideOutToBottom {
+    from {
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+    }
+
+    to {
+        top: 100vh;
+        transform: translateY(100%) translateX(-50%);
+        
+    }
 }

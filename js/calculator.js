@@ -14,7 +14,7 @@ const scoreIndicator = document.getElementById("score");
 function openCalculator(grade = 1, topic = 1) {
     wantedResult = randomRange(0, 9);
     generateEquation(wantedResult, 2);
-    document.getElementById("calculator").style.display = "flex";
+    calculator.classList.remove("calculator-hide");
 }
 
 function generateEquation(wantedFinalResult, amount = 3, complexity = 5) {

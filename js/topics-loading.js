@@ -34,7 +34,7 @@ function AllTopics(state) {
         topics.forEach(topic => {
             topic.classList.remove("went-off");
         })
-        document.getElementById("calculator").style.display = "none";
+        calculator.classList.add("calculator-hide");
     }
 
     if (state == "hidden") {
