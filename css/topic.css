@@ -1,14 +1,10 @@
 #main-container.topic {
-    background: url("https://media.istockphoto.com/id/628370726/vector/seamless-vector-pattern-different-numbers.jpg?s=612x612&w=0&k=20&c=r0mVHEL3HrDzgj5Q3GpRUtEt91nSscb5yCz0gUrZ67c=");
+    /* background: url("https://media.istockphoto.com/id/628370726/vector/seamless-vector-pattern-different-numbers.jpg?s=612x612&w=0&k=20&c=r0mVHEL3HrDzgj5Q3GpRUtEt91nSscb5yCz0gUrZ67c="); */
+    background: #5d6978;
     background-size: 200%;
     overflow: hidden;
+    min-height: 800px;
 }
-
-/* .test-background {
-    background: url("https://media.istockphoto.com/id/628370726/vector/seamless-vector-pattern-different-numbers.jpg?s=612x612&w=0&k=20&c=r0mVHEL3HrDzgj5Q3GpRUtEt91nSscb5yCz0gUrZ67c=");
-    background-size: 200%;
-    background-position: 50% 30%;
-} */
 
 .topic-container {
     overflow: hidden;

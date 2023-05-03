@@ -5,7 +5,7 @@ const topics = [];
 //     topic.classList.add("topic-item col-12 col-md-5");
 // })
 
-for(let i = 0; i < topicList.children.length - 1; ++i) {
+for(let i = 0; i < topicList.children.length; ++i) {
     topics[i] = topicList.children[i];
 }
 
@@ -35,11 +35,17 @@ function AllTopics(state) {
             topic.classList.remove("went-off");
         })
         calculator.classList.add("calculator-hide");
+        setTimeout(() => {
+            calculator.style.display = "none";
+        }, 750);
     }
 
     if (state == "hidden") {
         topics.forEach(topic => {
             topic.classList.add("went-off");
+            setTimeout(() => {
+                calculator.style.display = "flex";
+            }, 750);
         })
     }
 

@@ -145,7 +145,7 @@
 
 #calculator {
     position: absolute;
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 60vw;
     max-width: 500px;
@@ -160,6 +160,8 @@
     border-bottom-left-radius: 12px;
     animation: CalculatorSlideInFromBottom 600ms ease-in-out forwards;
     left: 50%;
+    top: 100vh;
+    transform: translateY(100%);
 }
 
 #calculator.calculator-hide {
@@ -168,11 +170,13 @@
 
 @keyframes CalculatorSlideInFromBottom {
     from {
+        display: none;
         top: 100vh;
         transform: translateY(100%) translateX(-50%);
     }
 
     to {
+        display: flex;
         top: 50%;
         transform: translateY(-50%) translateX(-50%);
     }
@@ -180,11 +184,13 @@
 
 @keyframes CalculatorSlideOutToBottom {
     from {
+        display: flex;
         top: 50%;
         transform: translateY(-50%) translateX(-50%);
     }
 
     to {
+        display: none;
         top: 100vh;
         transform: translateY(100%) translateX(-50%);
         

@@ -9,6 +9,7 @@ const resultContainer = document.getElementById("user-answer");
 const correctIndicator = document.getElementById("correct");
 const incorrectIndicator = document.getElementById("incorrect");
 const scoreIndicator = document.getElementById("score");
+var userScore = 0;
 
 /* -------------------- LOGIC -------------------- */
 function openCalculator(grade = 1, topic = 1) {
@@ -46,16 +47,23 @@ function userSubmit(value) {
     if (value == wantedResult) {
         correctIndicator.classList.add("active");
         setTimeout(() => {
-            correctIndicator.classList.remove("active")}, 1500);
+            correctIndicator.classList.remove("active");
+            AllTopics('show');
+        }, 750);
         resultContainer.innerHTML = wantedResult;
+
+        userScore += 1;
+        scoreIndicator.innerHTML = `${userScore}/10`
+
         return;
     }
 
 
     incorrectIndicator.classList.add("active");
     setTimeout(() => {
-        incorrectIndicator.classList.remove("active")} 
-    , 1500);
+        incorrectIndicator.classList.remove("active");
+        AllTopics('show');
+    }, 750);
 
     resultContainer.innerHTML = wantedResult;
     return;
