@@ -115,6 +115,10 @@
     border-radius: 8px;
 }
 
+#indicator #score.active {
+    background-color: #cdcdcd;
+    box-shadow: 0px 0px 8px 4px #cdcdcd;
+}
 
 #input-section {
     display: grid;

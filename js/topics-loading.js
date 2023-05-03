@@ -14,6 +14,7 @@ topics.forEach((topic, index) => {
     topic.classList.add("col-12");
     topic.classList.add("col-md-5");
 
+    topic.removeAttribute("disabled");
     topic.setAttribute("topic", index);
     topic.setAttribute("onclick", `openCalculator(1, ${index})`);
 });
@@ -22,6 +23,7 @@ topics.forEach((topic, index) => {
 topics.forEach((ele) => {
     ele.addEventListener("click", () => {
         ele.classList.add("learned");
+        ele.disabled = true;
         AllTopics("hidden");
         openCalculator(ele.getAttribute("topic")); //By the corresponding topic
     })

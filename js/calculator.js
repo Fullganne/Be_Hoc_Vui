@@ -44,6 +44,24 @@ function reverseCalculate(orgNum, newNum, amount, complexity) { //A recursive fu
 
 
 function userSubmit(value) {
+    if (value == "restart") {
+        userScore = 0;
+        scoreIndicator.innerHTML = `${userScore}/10`;
+        
+        scoreIndicator.classList.add("active");
+        setTimeout(() => {
+            scoreIndicator.classList.remove("active");
+            AllTopics('show');
+        }, 750);
+        
+        topics.forEach((topic) => {
+            topic.classList.remove("learned");
+            topic.removeAttribute("disabled");
+        });
+
+        return;
+    }
+
     if (value == wantedResult) {
         correctIndicator.classList.add("active");
         setTimeout(() => {
@@ -53,7 +71,7 @@ function userSubmit(value) {
         resultContainer.innerHTML = wantedResult;
 
         userScore += 1;
-        scoreIndicator.innerHTML = `${userScore}/10`
+        scoreIndicator.innerHTML = `${userScore}/10`;
 
         return;
     }

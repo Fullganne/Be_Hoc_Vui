@@ -95,10 +95,11 @@
 
 .list-topic__content .topic-item.learned {
     color: #fff;
-    text-shadow:  20px 20px 20px #000;
+    text-shadow:  12px 12px 20px #000;
     /* background: url("https://static8.depositphotos.com/1006106/892/v/450/depositphotos_8921838-stock-illustration-school.jpg"); */
     /* TO HARD TO SEE TEXT  */
     background: #0e2c53;
+    cursor: default;
 }
 
 .list-topic__content .topic-item.went-off:nth-child(odd) {
