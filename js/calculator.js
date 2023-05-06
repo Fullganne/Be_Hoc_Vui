@@ -1,3 +1,4 @@
+/* 🗿 */
 let wantedResult = "NO VALUE YET";
 
 const mainContainer = document.getElementById("main-container");
