@@ -9,11 +9,11 @@ session_start();
     $phonenumber = $_POST['phonenumber'];
     $password = $_POST['password'];
     $email = $_POST['email'];
-
-    if(!empty($name) && !empty($phonenumber) && !empty($password) && !empty($email))
+    $class = $_POST['classList'];
+    if(!empty($name) && !empty($phonenumber) && !empty($password) && !empty($email) && !empty($class))
     {
       //save to database
-      $query = "insert into tb_taikhoanhs (name, phonenumber, password, email) values('$name', '$phonenumber', '$password', '$email')";
+      $query = "insert into tb_taikhoanhs (name, phonenumber, password, email, lop) values('$name', '$phonenumber', '$password', '$email', '$class')";
       
       mysqli_query($con, $query);
       //redirect to login
@@ -25,3 +25,57 @@ session_start();
     }
   }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bé học vui</title>
+
+
+    <!-- SELF RESOURCE -->
+    <link rel="icon" type="img/png" href="./assets/favicon.png">
+    <link rel="stylesheet" href="./css/style.css">
+
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="body-register">
+    <div>
+        <a href="index.php"><img src="./assets/logo-removebg.png" alt="Logo" class="img logo_image" style="max-width: 25%;"></a>
+    </div>
+    <div class="container-register">
+        <div class="label-register">
+            <form action="register.php" onsubmit="return validateForm()" id="myForm" autocomplete="on" method="POST">
+                <li><label for="name" class="col-25">Họ và tên:</label><input type="text" id="name" name="name" placeholder="Nguyễn Văn A" class="input-form-register col-75"><br></li>
+                <li><label for="phonenumber" class="col-25">Số điện thoại:</label><input type="tel" id="pnumber" name="phonenumber" placeholder="1234567890" pattern="[0-9]{10}" class="input-form-register col-75"><br></li>
+                <li><label for="password" class="col-25">Mật khẩu:</label><input type="password" id="create_pw" name="password" class="input-form-register col-75"/><br></li>
+                <li><label for="pass-again" class="col-25">Xác nhận mật khẩu:</label><input type="password" id="confirm_pw" name="passwordAgain" class="input-form-register col-75" disabled="true"><i class="fa-solid toggle-password fa-eye-slash" id="togglePassword"></i><br></li>
+                <li class="alert"><ul class="col-25"></ul><ul class="col-75"><i class="fas fa-exclamation-circle error"></i><p class="text">Nhập ít nhất 8 kí tự!</p></ul></li>
+                <li><label for="mail" class="col-25">Email:</label><input type="email" id="email" name="email" placeholder="vidu@gmail.com" class="input-form-register col-75"><br></li>
+                <li><label for="class" class="col-25">Lớp:</label>
+                    <select name="classList" class="input-form-register col-75">
+                        <option value="">Chọn lớp</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select><br></li>
+                <input type="submit" value="ĐĂNG KÍ" class="submit-btn" id="regis-submit-btn">
+            </form> 
+        </div>
+        <script src="./js/login_register.js"></script>
+    </div>
+</body>
+</html>

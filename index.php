@@ -1,3 +1,51 @@
+<?php
+    session_start();
+    ob_start();
+    if (isset($_SESSION['id'])&&($_SESSION['id']==0)) {
+        header('location: admin.php');
+    }else {
+        if (isset($_GET['act'])) {
+            switch ($_GET['act']) {
+                case 'introduce':
+                    include "introduce.html";
+                    break;
+                case 'dangnhap':
+                    include "login.php";
+                    break;
+                case 'dangky':
+                    include "register.php";
+                    break;
+                case 'login':
+                    if (isset($_POST['login'])&&($_POST['login'])) {
+                        $phonenumber = $_POST['phonenumber'];
+                        $pass = $_POST['password'];
+                        $kq = getUserInfo($phonenumber);
+                        $_SESSION['name'] = $kq[0]['name'];
+                        $_SESSION['id'] = $kq[0]['id'];
+                        header('location: index.php');
+                        break;
+                    }
+                case 'account':
+                    include "account.html";
+                    break;
+                case 'lop1':
+                    include "game-pages/toan_1.html";
+                    break;
+                case 'thoat':
+                    unset($_SESSION['id']);
+                    header('location: login.php');
+                    break;
+                default:
+                    include "index.php";
+                    break;
+            }
+        }
+        //else {
+        //     include "index.php";
+        // }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,9 +89,12 @@
                                 <a href="index.php?act=introduce" style="color:#00B050 !important">Giới thiệu</a>
                             </li>
                             <?php
-                                if(isset($_SESSION['name'])&&($_SESSION['name']!="")) {
+                                if (isset($_SESSION['name'])&&($_SESSION['name']!="")) {
                                     echo '<li class="header__menu-item header__login">
                                         <a href="index.php?act=account">'.$_SESSION['name'].'</a>
+                                    </li>';
+                                    echo '<li class="header__menu-item header__register">
+                                        <a href="index.php?act=thoat">Đăng xuất</a>
                                     </li>';
                                 }else {
                             ?>
