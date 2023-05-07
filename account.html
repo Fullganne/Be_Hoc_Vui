@@ -41,7 +41,13 @@
                                 <a href="index.php?act=introduce" style="color:#00B050 !important">Giới thiệu</a>
                             </li>
                             <li class="header__menu-item header__login">
-                                <a href="index.php?act=dangnhap">Đăng nhập</a>
+                                <a href="account.html">
+                                  <?php
+                                    session_start();
+                                    $username = $_SESSION['name'];
+                                    echo $username;
+                                  ?>
+                                </a>
                             </li>
                             <li class="header__menu-item header__register">
                                 <a href="index.php?act=dangky">Đăng kí</a>

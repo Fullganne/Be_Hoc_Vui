@@ -6,10 +6,30 @@
   if((isset($_POST['dangnhap']))&&($_POST['dangnhap'])) 
   {
     $phonenumber = $_POST['phonenumber'];
-    $pass = $_POST['password'];
-    $id = checkUser($phonenumber, $pass);
-    $_SESSION['id'] = $id;
-    if($id==0) header('location: admin.php');
+    $password = $_POST['password'];
+
+    if(!empty($phonenumber) && !empty($password))
+    {
+      //read from database
+      $query = "select * from tb_taikhoanhs where phonenumber = '$phonenumber' limit 1";
+
+      $result = mysqli_query($con,$query);
+
+      if ($result)
+      {
+        if ($result && mysqli_num_rows($result) > 0) {
+            $user_data = mysqli_fetch_assoc($result);
+
+            if ($user_data['password'] === $password) {
+                $_SESSION['id'] = $user_data['id'];
+                $_SESSION['name'] = $user_data['name'];
+                header("Location: after-login.html");
+                die;
+            }
+        }
+      }
+      echo "Nhập sai số điện thoại hoặc mật khẩu!";
+    }
     else {
       $txt_error = "Nhập sai số điện thoại hoặc mật khẩu!";
     } header('location: login.php'); 
