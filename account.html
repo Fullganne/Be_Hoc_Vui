@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  $username = $_SESSION['name'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,14 +48,12 @@
                             <li class="header__menu-item header__login">
                                 <a href="account.html">
                                   <?php
-                                    session_start();
-                                    $username = $_SESSION['name'];
                                     echo $username;
                                   ?>
                                 </a>
                             </li>
                             <li class="header__menu-item header__register">
-                                <a href="register.html">Đăng kí</a>
+                                <a href="logout.php">Đăng xuất</a>
                             </li>
                         </ul>
                     </div>
@@ -78,20 +81,32 @@
                         <ul class="userinfo__info">
                             <li>
                                 <span class="d-inline-block userinfo__prefix">Họ tên: </span>
-                                <span>Nguyễn Đức Ân</span>
+                                <span><?php
+                                    echo $username;
+                                ?></span>
                             </li>
 
                             <li>
                                 <span class="d-inline-block userinfo__prefix">Lớp: </span>
-                                <span>Lớp 1</span>
+                                <span><?php
+                                    echo $_SESSION['lop'];
+                                ?></span>
                             </li>
                             <li>
                                 <span class="d-inline-block userinfo__prefix">Số điện thoại: </span>
-                                <span>0337333918</span>
+                                <span><?php
+                                    echo $_SESSION['sdt'];
+                                ?></span>
                             </li>
                             <li>
                                 <span class="d-inline-block userinfo__prefix">Loại người dùng: </span>
-                                <span>Học sinh</span>
+                                <span><?php
+                                    if($_SESSION['id']==0){
+                                        echo 'Admin';
+                                    } else {
+                                        echo 'Học sinh';
+                                    }
+                                ?></span>
                             </li>
                         </ul>
                     </div>

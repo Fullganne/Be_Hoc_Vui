@@ -21,9 +21,12 @@
             $user_data = mysqli_fetch_assoc($result);
 
             if ($user_data['password'] === $password) {
-                $_SESSION['id'] = $user_data['id'];
+                $_SESSION['id'] = $user_data['idHS'];
                 $_SESSION['name'] = $user_data['name'];
-                header("Location: after-login.html");
+                $_SESSION['diem'] = $user_data['diem'];
+                $_SESSION['lop'] = $user_data['lop'];
+                $_SESSION['sdt'] = $user_data['phonenumber'];
+                header("Location: index.html");
                 die;
             }
         }

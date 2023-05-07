@@ -1,3 +1,9 @@
+<?php 
+session_start();
+if($_SESSION['id']==0)
+    header('location: admin.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,12 +46,19 @@
                             <li class="header__menu-item header__about">
                                 <a href="introduce.html" style="color:#00B050 !important">Giới thiệu</a>
                             </li>
-                            <li class="header__menu-item header__login">
-                                <a href="login.html">Đăng nhập</a>
-                            </li>
-                            <li class="header__menu-item header__register">
-                                <a href="register.html">Đăng kí</a>
-                            </li>
+                            <?php
+                                if((isset($_SESSION['name']))&&($_SESSION['name']!="")){
+                                    echo '<li class="header__menu-item header__login">
+                                        <a href="account.html">' . $_SESSION['name'] . '</a>
+                                    </li>
+                                    <li class="header__menu-item header__register">
+                                        <a href="logout.php">Đăng xuất</a>
+                                    </li>';
+                                } else {
+                                    echo '<li class="header__menu-item header__login"><a href="login.html">Đăng nhập</a></li>
+                                    <li class="header__menu-item header__register"><a href="register.html">Đăng kí</a></li>';
+                                }
+                            ?>
                         </ul>
                     </div>
                 </div>
@@ -56,10 +69,10 @@
         <div class="container">
             <div class="row">
                 <a href="./game-pages/toan_1.html" class="col-2 grade-ele">Lớp 1</a>
-                <a href="index.php?act=lop2" class="col-2 grade-ele">Lớp 2</a>
-                <a href="index.php?act=lop3" class="col-2 grade-ele">Lớp 3</a>
-                <a href="index.php?act=lop4" class="col-2 grade-ele">Lớp 4</a>
-                <a href="index.php?act=lop5" class="col-2 grade-ele">Lớp 5</a>
+                <a href="./game-pages/toan_1.html" class="col-2 grade-ele">Lớp 2</a>
+                <a href="./game-pages/toan_1.html" class="col-2 grade-ele">Lớp 3</a>
+                <a href="./game-pages/toan_1.html" class="col-2 grade-ele">Lớp 4</a>
+                <a href="./game-pages/toan_1.html" class="col-2 grade-ele">Lớp 5</a>
             </div>
         </div>
     </section>
@@ -98,7 +111,7 @@
                 <div class="grade__content">
                     <div class="row">
                         <div class="grade__content-item">
-                            <a href="index.php?act=lop1">
+                            <a href="./game-pages/toan_1.html">
                                 <img src="assets/1.png"   alt=""
                                     class="img-fluid" style="height: 200px;width: 200px;">
                                 <h5>Lớp 1</h5>
