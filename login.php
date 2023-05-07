@@ -22,7 +22,8 @@ session_start();
 
             if ($user_data['password'] === $password) {
                 $_SESSION['id'] = $user_data['id'];
-                header("Location: index.html");
+                $_SESSION['name'] = $user_data['name'];
+                header("Location: after-login.html");
                 die;
             }
         }
