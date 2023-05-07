@@ -29,29 +29,29 @@
         <div class="container">
             <div class="header-wrapper row">
                 <div class="header__logo">
-                    <a href="index.php"><img src="./assets/logo.png" alt="Logo" class="img-fluid" style="object-fit:contain; width:150px; height:150px;"></a>
+                    <a href="index.html"><img src="./assets/logo.png" alt="Logo" class="img-fluid" style="object-fit:contain; width:150px; height:150px;"></a>
                 </div>
                 <div class="header__menu">
                     <div class="container">
                         <ul class="header__menu-wrap row">
                             <li class="header__menu-item header__home-btn">
-                                <a href="index.php">Trang chủ</a>
+                                <a href="index.html">Trang chủ</a>
                             </li>
                             <li class="header__menu-item header__about">
-                                <a href="index.php?act=introduce" style="color:#00B050 !important">Giới thiệu</a>
+                                <a href="introduce.html" style="color:#00B050 !important">Giới thiệu</a>
                             </li>
                             <?php
                                 if(isset($_SESSION['name'])&&($_SESSION['name']!="")) {
                                     echo '<li class="header__menu-item header__login">
-                                        <a href="index.php?act=account">'.$_SESSION['name'].'</a>
+                                        <a href="account.html">'.$_SESSION['name'].'</a>
                                     </li>';
                                 }else {
                             ?>
                                     <li class="header__menu-item header__login">
-                                        <a href="index.php?act=dangnhap">Đăng nhập</a>
+                                        <a href="login.html">Đăng nhập</a>
                                     </li>
                                     <li class="header__menu-item header__register">
-                                        <a href="index.php?act=dangky">Đăng kí</a>
+                                        <a href="register.html">Đăng kí</a>
                                     </li>
                             <?php }?>
                         </ul>
@@ -63,7 +63,7 @@
     <section class="grade-selector">
         <div class="container">
             <div class="row">
-                <a href="index.php?act=lop1" class="col-2 grade-ele">Lớp 1</a>
+                <a href="./game-pages/toan_1.html" class="col-2 grade-ele">Lớp 1</a>
                 <a href="index.php?act=lop2" class="col-2 grade-ele">Lớp 2</a>
                 <a href="index.php?act=lop3" class="col-2 grade-ele">Lớp 3</a>
                 <a href="index.php?act=lop4" class="col-2 grade-ele">Lớp 4</a>
