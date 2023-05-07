@@ -38,7 +38,6 @@ a {
 }
 
 section {
-    height: 75vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,6 +82,10 @@ section {
     align-items: center;
     /* background-color: #ffeb0d; */
 }
+.col-6{
+    margin-left: 70px;
+    margin-right: 20px;
+}
 
 .about {
     background-color: #fff8eb;
@@ -92,6 +95,7 @@ section {
     border: 8px solid #8dc63f;
     border-radius: 8px;
 }
+
 .about__video-play {
     width: 100px;
     height: 100px;
@@ -105,6 +109,7 @@ section {
 .about__content {
     position: relative;
     z-index: 1;
+    padding-right: 100px;
 }
 .about__content h4 {
     color: #92278f;
@@ -141,7 +146,6 @@ section {
     bottom: 0;
     left: 45%;
 }
-
 #main-container {
     position: relative;
 }
@@ -164,8 +168,11 @@ section {
     font-weight: bold;
     color: #0e2c53;
 }
-
-
+@media all and(min-width: 900px){
+.container {
+    max-width: 1140px;
+  }
+}
 @media all and (max-width: 576px) {
 
     .grade__content-item {
@@ -341,10 +348,9 @@ section {
     align-content: middle;
 }
 
-.grade-selector .row {
-    /* background-color: #002c9d; */
-}
-
+/* .grade-selector .row {
+     background-color: #002c9d; 
+} */
 .grade-selector .row a:hover {
     background-color: salmon;
     transition: ease-in-out 100ms;
@@ -381,7 +387,6 @@ section {
     position: relative;
     min-height: 100vh;
     padding: 80px 0;
-    /* Going to school pic */
     background-image: url("http://labartisan.net/demo/kitton/assets/images/counter/counter-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -415,7 +420,10 @@ section {
     margin-top: 1rem;
     text-transform: uppercase;
 }
-
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
 
 
 @media all and (min-width: 1000px) {
@@ -489,7 +497,9 @@ section {
     cursor: pointer;
     color: #fff;
 }
-
+.background-image{
+    height: 2000px;
+}
 .listPage .active {
     background-color: #B129EF;
     color: #fff;
