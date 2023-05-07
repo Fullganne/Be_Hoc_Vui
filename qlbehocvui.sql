@@ -42,8 +42,9 @@ CREATE TABLE `tb_taikhoanhs` (
 --
 
 INSERT INTO `tb_taikhoanhs` (`idHS`, `name`, `phonenumber`, `password`, `email`, `point`, `lop`) VALUES
-(2, 'Nguyễn Đức Ân', '0337333918', '12345678', 'firewolf148@gmail.com', 0, 1),
-(3, 'Nguyen Duc An', '0908231222', '12345678', 'annd.cnthongtin@gmail.com', 0, 2);
+(0, 'Admin', '0000000000', 'admin', 'adminbehocvui@gmail.com', 0, 0),
+(1, 'Nguyễn Đức Ân', '0337333918', '12345678', 'firewolf148@gmail.com', 0, 1),
+(2, 'Nguyen Duc An', '0908231222', '12345678', 'annd.cnthongtin@gmail.com', 0, 2);
 
 --
 -- Indexes for dumped tables

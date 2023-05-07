@@ -1,3 +1,51 @@
+<?php
+    session_start();
+    ob_start();
+    if (isset($_SESSION['id'])&&($_SESSION['id']==0)) {
+        header('location: admin.php');
+    }else {
+        if (isset($_GET['act'])) {
+            switch ($_GET['act']) {
+                case 'introduce':
+                    include "introduce.html";
+                    break;
+                case 'dangnhap':
+                    include "login.php";
+                    break;
+                case 'dangky':
+                    include "register.php";
+                    break;
+                case 'login':
+                    if (isset($_POST['login'])&&($_POST['login'])) {
+                        $phonenumber = $_POST['phonenumber'];
+                        $pass = $_POST['password'];
+                        $kq = getUserInfo($phonenumber);
+                        $_SESSION['name'] = $kq[0]['name'];
+                        $_SESSION['id'] = $kq[0]['id'];
+                        header('location: index.php');
+                        break;
+                    }
+                case 'account':
+                    include "account.html";
+                    break;
+                case 'lop1':
+                    include "game-pages/toan_1.html";
+                    break;
+                case 'thoat':
+                    unset($_SESSION['id']);
+                    header('location: login.php');
+                    break;
+                default:
+                    include "index.php";
+                    break;
+            }
+        }
+        //else {
+        //     include "index.php";
+        // }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -41,9 +89,12 @@
                                 <a href="index.php?act=introduce" style="color:#00B050 !important">Giới thiệu</a>
                             </li>
                             <?php
-                                if(isset($_SESSION['name'])&&($_SESSION['name']!="")) {
+                                if (isset($_SESSION['name'])&&($_SESSION['name']!="")) {
                                     echo '<li class="header__menu-item header__login">
                                         <a href="index.php?act=account">'.$_SESSION['name'].'</a>
+                                    </li>';
+                                    echo '<li class="header__menu-item header__register">
+                                        <a href="index.php?act=thoat">Đăng xuất</a>
                                     </li>';
                                 }else {
                             ?>
@@ -79,10 +130,10 @@
                 <img src="" alt="">
             </div>
             <div class="row about-wrapper">
-                <div class="col-5 about__firstcol">
+                <div class="col-6 about__firstcol">
                     <div class="about__video">
                         <img src="./assets/trangchu.png" 
-                            class="img-fluid" width="600px" >
+                            class="img-fluid" width="450px" height="350px">
                         
                     </div>
                 </div>
@@ -108,35 +159,35 @@
                         <div class="grade__content-item">
                             <a href="index.php?act=lop1">
                                 <img src="assets/1.png"   alt=""
-                                    class="img-fluid" style="height: 200px;width: 200px;">
+                                    class="img-fluid" style="height: 200px;">
                                 <h5>Lớp 1</h5>
                             </a>
                         </div>
                         <div class="grade__content-item">
                             <a href="./game-pages//toan_2.html">
                                 <img src="assets/2.png" alt="" 
-                                    class="img-fluid" style="height: 200px;width: 200px;">
+                                    class="img-fluid" style="height: 200px;">
                                 <h5>Lớp 2</h5>
                             </a>
                         </div>
                         <div class="grade__content-item">
                             <a href="./game-pages//toan_3.html">
                                 <img src="assets/3.png" alt="" 
-                                    class="img-fluid" style="height: 200px;width: 200px;">
+                                    class="img-fluid" style="height: 200px;">
                                 <h5>Lớp 3</h5>
                             </a>
                         </div>
                         <div class="grade__content-item">
                             <a href="./game-pages//toan_4.html">
                                 <img src="assets/4.png" alt="" 
-                                    class="img-fluid" style="height: 200px;width: 200px;">
+                                    class="img-fluid" style="height: 200px;">
                                 <h5>Lớp 4</h5>
                             </a>
                         </div>
                         <div class="grade__content-item">
                             <a href="./game-pages//toan_5.html">
                                 <img src="assets/5.png" alt=""   
-                                    class="img-fluid" style="height: 200px;width: 200px;">
+                                    class="img-fluid" style="height: 200px;">
                                 <h5>Lớp 5</h5>
                             </a>
                         </div>

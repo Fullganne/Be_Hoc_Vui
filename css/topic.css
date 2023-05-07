@@ -1,7 +1,7 @@
 #main-container.topic {
-    /* background: url("https://media.istockphoto.com/id/628370726/vector/seamless-vector-pattern-different-numbers.jpg?s=612x612&w=0&k=20&c=r0mVHEL3HrDzgj5Q3GpRUtEt91nSscb5yCz0gUrZ67c="); */
-    background: #5d6978;
-    background-size: 200%;
+    background-image: url("https://img.freepik.com/free-vector/school-chalk-board_98292-4476.jpg?w=740&t=st=1683115628~exp=1683116228~hmac=ea2b94c033d126bd1fc5ac3d07d82d899f3657bd8299fc8d5d1d940cbb9657a8");
+    /* background: #5d6978; */
+    background-size: 100%;
     overflow: hidden;
     min-height: 800px;
 }
@@ -97,7 +97,7 @@
     color: #fff;
     text-shadow:  12px 12px 20px #000;
     /* background: url("https://static8.depositphotos.com/1006106/892/v/450/depositphotos_8921838-stock-illustration-school.jpg"); */
-    /* TO HARD TO SEE TEXT  */
+    /* TOO HARD TO SEE TEXT  */
     background: #0e2c53;
     cursor: default;
 }
