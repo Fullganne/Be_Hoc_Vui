@@ -23,7 +23,7 @@
             if ($user_data['password'] === $password) {
                 $_SESSION['id'] = $user_data['idHS'];
                 $_SESSION['name'] = $user_data['name'];
-                $_SESSION['diem'] = $user_data['diem'];
+                $_SESSION['diem'] = $user_data['point'];
                 $_SESSION['lop'] = $user_data['lop'];
                 $_SESSION['sdt'] = $user_data['phonenumber'];
                 header("Location: index.html");
