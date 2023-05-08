@@ -10,15 +10,17 @@ const resultContainer = document.getElementById("user-answer");
 const correctIndicator = document.getElementById("correct");
 const incorrectIndicator = document.getElementById("incorrect");
 const scoreIndicator = document.getElementById("score");
-var userScore = 0;
+var userScore = 0; // Điểm người chơi
 
 /* -------------------- LOGIC -------------------- */
+// Mở máy tính
 function openCalculator(grade = 1, topic = 1) {
     wantedResult = randomRange(0, 9);
     generateEquation(wantedResult, 2);
     calculator.classList.remove("calculator-hide");
 }
 
+// Tạo bài toán
 function generateEquation(wantedFinalResult, amount = 3, complexity = 5) {
     // amount = randomRange(1,4);
     resultContainer.innerHTML = "?";
@@ -26,9 +28,15 @@ function generateEquation(wantedFinalResult, amount = 3, complexity = 5) {
     //SHOULD NOT USE EVAL DUE TO BEING EXPOSED TO HIGH PROBABILITY OF SECURITY BREACH
 
     equation.innerHTML = reverseCalculate(wantedFinalResult, randomRange(1,100), amount, complexity) + " = ";
+
     // resultContainer.innerHTML = wantedFinalResult;
 }
 
+// Tạo phương trình từ 1 số (Đệ quy)
+// orgNum = kết quả muốn có
+// newNum = số random ra
+// ammount = số lượng phép tính
+// complexity = độ phức tạp(chưa xài)
 function reverseCalculate(orgNum, newNum, amount, complexity) { //A recursive function to generate equations from a chosen Num
     if (amount == 0) {
         return orgNum;
@@ -43,10 +51,10 @@ function reverseCalculate(orgNum, newNum, amount, complexity) { //A recursive fu
     }
 }
 
-
+//Nhập đáp án
 function userSubmit(value) {
     if (value == "restart") {
-        userScore = 0;
+        userScore = 0; // Điểm người 
         scoreIndicator.innerHTML = `${userScore}/10`;
         
         scoreIndicator.classList.add("active");
@@ -88,6 +96,7 @@ function userSubmit(value) {
     return;
 }
 
-setTimeout(() => {
-    document.getElementById("calculator").scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
-}, 1000);
+// Debug calculator cho dễ
+// setTimeout(() => {
+//     document.getElementById("calculator").scrollIntoView({ behavior: "smooth", block: "center", inline: "center" });
+// }, 1000);
