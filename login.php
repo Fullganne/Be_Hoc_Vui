@@ -21,7 +21,7 @@
             $user_data = mysqli_fetch_assoc($result);
 
             if ($user_data['password'] === $password) {
-                $_SESSION['id'] = $user_data['idHS'];
+                $_SESSION['id'] = $user_data['idTK'];
                 $_SESSION['name'] = $user_data['name'];
                 $_SESSION['diem'] = $user_data['point'];
                 $_SESSION['lop'] = $user_data['lop'];
